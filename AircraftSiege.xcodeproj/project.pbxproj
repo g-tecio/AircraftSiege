@@ -10,24 +10,44 @@
 		DE99ED9B21079F1400861766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99ED9A21079F1400861766 /* AppDelegate.swift */; };
 		DE99ED9D21079F1400861766 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99ED9C21079F1400861766 /* GameScene.sks */; };
 		DE99ED9F21079F1400861766 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99ED9E21079F1400861766 /* Actions.sks */; };
-		DE99EDA121079F1400861766 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDA021079F1400861766 /* GameScene.swift */; };
 		DE99EDA321079F1400861766 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDA221079F1400861766 /* GameViewController.swift */; };
 		DE99EDA621079F1400861766 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDA421079F1400861766 /* Main.storyboard */; };
 		DE99EDA821079F1A00861766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDA721079F1A00861766 /* Assets.xcassets */; };
 		DE99EDAB21079F1A00861766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDA921079F1A00861766 /* LaunchScreen.storyboard */; };
+		DE99EDB521079FCC00861766 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB221079FCC00861766 /* explosion.mp3 */; };
+		DE99EDB621079FCC00861766 /* loose.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB321079FCC00861766 /* loose.wav */; };
+		DE99EDB721079FCC00861766 /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB421079FCC00861766 /* torpedo.mp3 */; };
+		DE99EDBC2107A02700861766 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB92107A02700861766 /* Starfield.sks */; };
+		DE99EDBD2107A02700861766 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDBA2107A02700861766 /* spark.png */; };
+		DE99EDBE2107A02700861766 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDBB2107A02700861766 /* Explosion.sks */; };
+		DE99EDCA2107A12500861766 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDC92107A12500861766 /* GameScene.swift */; };
+		DE99EDCF2107A36E00861766 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDCD2107A36E00861766 /* MenuScene.swift */; };
+		DE99EDD02107A36E00861766 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDCE2107A36E00861766 /* MenuScene.sks */; };
+		DE99EDD32107A38B00861766 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDD12107A38B00861766 /* GameOverScene.sks */; };
+		DE99EDD42107A38B00861766 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDD22107A38B00861766 /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE99ED9721079F1400861766 /* AircraftSiege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AircraftSiege.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE99ED9A21079F1400861766 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE99ED9C21079F1400861766 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		DE99ED9C21079F1400861766 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = AircraftSiege/GameScene.sks; sourceTree = SOURCE_ROOT; };
 		DE99ED9E21079F1400861766 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		DE99EDA021079F1400861766 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		DE99EDA221079F1400861766 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DE99EDA521079F1400861766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE99EDA721079F1A00861766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE99EDAA21079F1A00861766 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE99EDAC21079F1A00861766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE99EDB221079FCC00861766 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		DE99EDB321079FCC00861766 /* loose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loose.wav; sourceTree = "<group>"; };
+		DE99EDB421079FCC00861766 /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		DE99EDB92107A02700861766 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		DE99EDBA2107A02700861766 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		DE99EDBB2107A02700861766 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		DE99EDC92107A12500861766 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = ../../../../../.Trash/GameScene.swift; sourceTree = "<group>"; };
+		DE99EDCD2107A36E00861766 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		DE99EDCE2107A36E00861766 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		DE99EDD12107A38B00861766 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		DE99EDD22107A38B00861766 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +81,66 @@
 			isa = PBXGroup;
 			children = (
 				DE99ED9A21079F1400861766 /* AppDelegate.swift */,
-				DE99ED9C21079F1400861766 /* GameScene.sks */,
-				DE99ED9E21079F1400861766 /* Actions.sks */,
-				DE99EDA021079F1400861766 /* GameScene.swift */,
 				DE99EDA221079F1400861766 /* GameViewController.swift */,
+				DE99ED9E21079F1400861766 /* Actions.sks */,
 				DE99EDA421079F1400861766 /* Main.storyboard */,
+				DE99EDCB2107A2B200861766 /* GameOver */,
+				DE99EDCC2107A2CC00861766 /* Menu */,
+				DE99EDC42107A07C00861766 /* Game */,
+				DE99EDBF2107A03600861766 /* Emmiters */,
+				DE99EDB82107A01300861766 /* Sounds */,
 				DE99EDA721079F1A00861766 /* Assets.xcassets */,
 				DE99EDA921079F1A00861766 /* LaunchScreen.storyboard */,
 				DE99EDAC21079F1A00861766 /* Info.plist */,
 			);
 			path = AircraftSiege;
+			sourceTree = "<group>";
+		};
+		DE99EDB82107A01300861766 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DE99EDB221079FCC00861766 /* explosion.mp3 */,
+				DE99EDB321079FCC00861766 /* loose.wav */,
+				DE99EDB421079FCC00861766 /* torpedo.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		DE99EDBF2107A03600861766 /* Emmiters */ = {
+			isa = PBXGroup;
+			children = (
+				DE99EDBB2107A02700861766 /* Explosion.sks */,
+				DE99EDBA2107A02700861766 /* spark.png */,
+				DE99EDB92107A02700861766 /* Starfield.sks */,
+			);
+			path = Emmiters;
+			sourceTree = "<group>";
+		};
+		DE99EDC42107A07C00861766 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				DE99ED9C21079F1400861766 /* GameScene.sks */,
+				DE99EDC92107A12500861766 /* GameScene.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		DE99EDCB2107A2B200861766 /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				DE99EDD12107A38B00861766 /* GameOverScene.sks */,
+				DE99EDD22107A38B00861766 /* GameOverScene.swift */,
+			);
+			path = GameOver;
+			sourceTree = "<group>";
+		};
+		DE99EDCC2107A2CC00861766 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DE99EDCE2107A36E00861766 /* MenuScene.sks */,
+				DE99EDCD2107A36E00861766 /* MenuScene.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,10 +201,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE99EDB521079FCC00861766 /* explosion.mp3 in Resources */,
+				DE99EDD32107A38B00861766 /* GameOverScene.sks in Resources */,
 				DE99EDA621079F1400861766 /* Main.storyboard in Resources */,
 				DE99ED9D21079F1400861766 /* GameScene.sks in Resources */,
 				DE99EDA821079F1A00861766 /* Assets.xcassets in Resources */,
+				DE99EDB621079FCC00861766 /* loose.wav in Resources */,
+				DE99EDBE2107A02700861766 /* Explosion.sks in Resources */,
+				DE99EDBD2107A02700861766 /* spark.png in Resources */,
+				DE99EDD02107A36E00861766 /* MenuScene.sks in Resources */,
 				DE99EDAB21079F1A00861766 /* LaunchScreen.storyboard in Resources */,
+				DE99EDBC2107A02700861766 /* Starfield.sks in Resources */,
+				DE99EDB721079FCC00861766 /* torpedo.mp3 in Resources */,
 				DE99ED9F21079F1400861766 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE99EDA121079F1400861766 /* GameScene.swift in Sources */,
+				DE99EDD42107A38B00861766 /* GameOverScene.swift in Sources */,
+				DE99EDCA2107A12500861766 /* GameScene.swift in Sources */,
+				DE99EDCF2107A36E00861766 /* MenuScene.swift in Sources */,
 				DE99EDA321079F1400861766 /* GameViewController.swift in Sources */,
 				DE99ED9B21079F1400861766 /* AppDelegate.swift in Sources */,
 			);
