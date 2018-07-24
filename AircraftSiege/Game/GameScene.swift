@@ -97,7 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
-    func addAlien () {
+    @objc func addAlien () {
         possibleAliens = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAliens) as! [String]
         
         let alien = SKSpriteNode(imageNamed: possibleAliens[0])
@@ -143,7 +143,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         alien.run(SKAction.sequence(actionArray))
         
-    
+        
     }
     
     
@@ -197,14 +197,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if (firstBody.categoryBitMask & photonTorpedoCategory) != 0 && (secondBody.categoryBitMask & alienCategory) != 0 {
-           torpedoDidCollideWithAlien(torpedoNode: firstBody.node as! SKSpriteNode, alienNode: secondBody.node as! SKSpriteNode)
+            torpedoDidCollideWithAlien(torpedoNode: firstBody.node as! SKSpriteNode, alienNode: secondBody.node as! SKSpriteNode)
         }
         
     }
     
     
     func torpedoDidCollideWithAlien (torpedoNode:SKSpriteNode, alienNode:SKSpriteNode) {
-    
+        
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
         explosion.position = alienNode.position
         self.addChild(explosion)
@@ -215,7 +215,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         alienNode.removeFromParent()
         
         
-        self.run(SKAction.wait(forDuration: 2)) { 
+        self.run(SKAction.wait(forDuration: 2)) {
             explosion.removeFromParent()
         }
         
