@@ -29,6 +29,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let alienCategory:UInt32 = 0x1 << 1
     let photonTorpedoCategory:UInt32 = 0x1 << 0
     
+    var messageLabel:SKLabelNode!
+    var initialScore = 100
+    var timeInterval = 0.75
     
     let motionManger = CMMotionManager()
     var xAcceleration:CGFloat = 0
@@ -64,12 +67,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(scoreLabel)
         
-        var timeInterval = 0.75
-        
-        if UserDefaults.standard.bool(forKey: "hard"){
-            timeInterval = 0.3
-        }
-        
+        messageLabel = SKLabelNode(text: "Next Level")
+        messageLabel.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.width/2)
+        messageLabel.fontName = "AmericanTypewriter-Bold"
+        messageLabel.fontSize = 28
+        messageLabel.fontColor = UIColor.white
+        messageLabel.isHidden = true
+
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
         
         
@@ -221,7 +225,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         score += 5
         
-        
+        if score == initialScore{
+            timeInterval = timeInterval - 0.01
+            
+            gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
+            
+            initialScore = initialScore * 2
+            
+            messageLabel.isHidden = false
+        }else{
+            messageLabel.isHidden = true
+        }
     }
     
     override func didSimulatePhysics() {
