@@ -224,7 +224,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         score += 5
-        //Difficulty
         if score == initialScore{
             timeInterval = timeInterval - 0.01
             
