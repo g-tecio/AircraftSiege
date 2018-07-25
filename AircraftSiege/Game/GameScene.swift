@@ -16,27 +16,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player:SKSpriteNode!
     
     var scoreLabel:SKLabelNode!
+    
     var score:Int = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
         }
     }
     
+    var messageLabel:SKLabelNode!
+    
     var gameTimer:Timer!
     
-    var possibleAliens = ["alien", "alien2", "alien3"]
+    var possibleAliens = ["alien", "alien2", "alien3", "alien4"]
     
     let alienCategory:UInt32 = 0x1 << 1
     let photonTorpedoCategory:UInt32 = 0x1 << 0
     
-    var messageLabel:SKLabelNode!
-    var initialScore = 100
-    var timeInterval = 0.75
     
     let motionManger = CMMotionManager()
     var xAcceleration:CGFloat = 0
     
     var livesArray:[SKSpriteNode]!
+    
+    var timeInterval = 0.75
+    
+    var initialScore = 10
     
     override func didMove(to view: SKView) {
         
@@ -67,14 +71,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(scoreLabel)
         
+        
         messageLabel = SKLabelNode(text: "Next Level")
         messageLabel.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.width/2)
         messageLabel.fontName = "AmericanTypewriter-Bold"
         messageLabel.fontSize = 28
         messageLabel.fontColor = UIColor.white
         messageLabel.isHidden = true
-
+        
+        self.addChild(messageLabel)
+        
+        
+        //        if UserDefaults.standard.bool(forKey: "hard"){
+        //            timeInterval = 0.3
+        //        }
+        
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
+        
+        print("tiempo\(timeInterval)")
+        print(gameTimer)
+        
         
         
         motionManger.accelerometerUpdateInterval = 0.2
@@ -106,7 +122,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let alien = SKSpriteNode(imageNamed: possibleAliens[0])
         
-        let randomAlienPosition = GKRandomDistribution(lowestValue: 0, highestValue: 414)
+        let randomAlienPosition = GKRandomDistribution(lowestValue: 10, highestValue: 380)
         let position = CGFloat(randomAlienPosition.nextInt())
         
         alien.position = CGPoint(x: position, y: self.frame.size.height + alien.size.height)
@@ -134,12 +150,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 liveNode!.removeFromParent()
                 self.livesArray.removeFirst()
                 
-                if self.livesArray.count == 0{
-                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
-                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
-                    gameOver.score = self.score
-                    self.view?.presentScene(gameOver, transition: transition)
-                }
+//                if self.livesArray.count == 0{
+//                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+//                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
+//                    gameOver.score = self.score
+//                    self.view?.presentScene(gameOver, transition: transition)
+//                }
             }
         })
         
@@ -222,8 +238,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.run(SKAction.wait(forDuration: 2)) {
             explosion.removeFromParent()
         }
-        //Difficulty
+        
         score += 5
+        
+        
         if score == initialScore{
             timeInterval = timeInterval - 0.01
             
@@ -235,6 +253,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }else{
             messageLabel.isHidden = true
         }
+        
+        
     }
     
     override func didSimulatePhysics() {
@@ -258,3 +278,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Called before each frame is rendered
     }
 }
+
