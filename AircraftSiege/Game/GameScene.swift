@@ -40,7 +40,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var timeInterval = 0.75
     
-    var initialScore = 10
+    var initialScore = 100
 
     
     override func didMove(to view: SKView) {
@@ -60,13 +60,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(player)
         
-        //Barrier
-        // 1
-        let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
-        // 2
-        borderBody.friction = 0
-        // 3
-        self.physicsBody = borderBody
+
         
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
@@ -160,12 +154,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 liveNode!.removeFromParent()
                 self.livesArray.removeFirst()
                 
-//                if self.livesArray.count == 0{
-//                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
-//                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
-//                    gameOver.score = self.score
-//                    self.view?.presentScene(gameOver, transition: transition)
-//                }
+                if self.livesArray.count == 0{
+                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                    let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
+                    gameOver.score = self.score
+                    self.view?.presentScene(gameOver, transition: transition)
+                }
             }
         })
         

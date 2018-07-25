@@ -15,6 +15,7 @@ class MenuScene: SKScene {
     var newGameButtonNode:SKSpriteNode!
     var difficultyButtonNode:SKSpriteNode!
     var difficultyLabelNode:SKLabelNode!
+    var instructions:SKSpriteNode!
     
     override func didMove(to view: SKView) {
      
@@ -23,10 +24,12 @@ class MenuScene: SKScene {
         
         newGameButtonNode = self.childNode(withName: "newGameButton") as! SKSpriteNode
         difficultyButtonNode = self.childNode(withName: "difficultyButton") as! SKSpriteNode
-        
         difficultyButtonNode.texture = SKTexture(imageNamed: "difficultyButton")
-        
         difficultyLabelNode = self.childNode(withName: "difficultyLabel") as! SKLabelNode
+        
+        instructions = self.childNode(withName: "instructions") as! SKSpriteNode
+        instructions.texture = SKTexture(imageNamed: "difficultyButton")
+  
         
         let userDefaults = UserDefaults.standard
         
