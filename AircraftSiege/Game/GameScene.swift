@@ -41,6 +41,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timeInterval = 0.75
     
     var initialScore = 10
+
     
     override func didMove(to view: SKView) {
         
@@ -58,6 +59,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 20)
         
         self.addChild(player)
+        
+        //Barrier
+        // 1
+        let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        // 2
+        borderBody.friction = 0
+        // 3
+        self.physicsBody = borderBody
+        
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         self.physicsWorld.contactDelegate = self
