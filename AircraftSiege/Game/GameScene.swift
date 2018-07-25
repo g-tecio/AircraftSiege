@@ -222,7 +222,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.run(SKAction.wait(forDuration: 2)) {
             explosion.removeFromParent()
         }
-        
+        //Difficulty
         score += 5
         if score == initialScore{
             timeInterval = timeInterval - 0.01
