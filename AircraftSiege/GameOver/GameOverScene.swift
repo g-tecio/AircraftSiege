@@ -24,7 +24,7 @@ class GameOverScene: SKScene {
         newGameButtonNode.texture = SKTexture(imageNamed: "newGameButton")
         
         mainMenu = self.childNode(withName: "btnMainMenu") as! SKSpriteNode
-        //mainMenu.texture = SKTexture(imageNamed: "difficultyButton")
+        mainMenu.texture = SKTexture(imageNamed: "mainMenuButton")
         
     }
     
@@ -41,7 +41,7 @@ class GameOverScene: SKScene {
             }
             if node[0].name == "btnMainMenu" {
                 let transition = SKTransition.flipHorizontal(withDuration: 0.5)
-                let menuScene = MenuScene(size: self.size)
+                let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
                 self.view?.presentScene(menuScene, transition: transition)
             }
         }
