@@ -21,10 +21,10 @@ class GameOverScene: SKScene {
         scoreLabel.text = "\(score)"
         
         newGameButtonNode = self.childNode(withName: "newGameButton") as! SKSpriteNode
-        newGameButtonNode.texture = SKTexture(imageNamed: "newGameButton")
+        newGameButtonNode.texture = SKTexture(imageNamed: "Replay Button")
         
         mainMenu = self.childNode(withName: "btnMainMenu") as! SKSpriteNode
-        mainMenu.texture = SKTexture(imageNamed: "mainMenuButton")
+        mainMenu.texture = SKTexture(imageNamed: "Return Button-1")
         
     }
     

@@ -40,7 +40,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timeInterval = 0.75
     
     var initialScore = 100
-
+    
     
     override func didMove(to view: SKView) {
         
@@ -51,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         starfield.advanceSimulationTime(10)
         self.addChild(starfield)
         
-        starfield.zPosition = -1
+        //starfield.zPosition = -1
         
         player = SKSpriteNode(imageNamed: "shuttle")
         
@@ -59,7 +59,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(player)
         
-
+        
         
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
@@ -88,7 +88,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //        if UserDefaults.standard.bool(forKey: "hard"){
         //            timeInterval = 0.3
         //        }
-        
+        self.backgroundColor=UIColor(red:0.54, green:0.90, blue:1.00, alpha:1.0)
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
         
         print("tiempo\(timeInterval)")
@@ -154,7 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.livesArray.removeFirst()
                 
                 if self.livesArray.count == 0{
-                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                     let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
                     gameOver.score = self.score
                     self.view?.presentScene(gameOver, transition: transition)

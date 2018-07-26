@@ -10,36 +10,32 @@ import SpriteKit
 
 class MenuScene: SKScene {
     
-    var starfield:SKEmitterNode!
-    
     var newGameButtonNode:SKSpriteNode!
     var difficultyButtonNode:SKSpriteNode!
     var difficultyLabelNode:SKLabelNode!
     var instructions:SKSpriteNode!
+    var exitButtonNode:SKSpriteNode!
+    var menuScreenNode:SKSpriteNode!
     
     override func didMove(to view: SKView) {
-     
-        starfield = self.childNode(withName: "starfield") as! SKEmitterNode
-        starfield.advanceSimulationTime(10)
+    
+        menuScreenNode = self.childNode(withName: "MenuScreen") as! SKSpriteNode
+        menuScreenNode.texture = SKTexture(imageNamed: "Menu Screen")
+        menuScreenNode.zPosition = 2
         
         newGameButtonNode = self.childNode(withName: "newGameButton") as! SKSpriteNode
-        difficultyButtonNode = self.childNode(withName: "difficultyButton") as! SKSpriteNode
-        difficultyButtonNode.texture = SKTexture(imageNamed: "difficultyButton")
-        difficultyLabelNode = self.childNode(withName: "difficultyLabel") as! SKLabelNode
+        newGameButtonNode.texture = SKTexture(imageNamed: "Play_Button")
+        newGameButtonNode.zPosition = 3
+
         
         instructions = self.childNode(withName: "instructions") as! SKSpriteNode
-        instructions.texture = SKTexture(imageNamed: "difficultyButton")
-  
+        instructions.texture = SKTexture(imageNamed: "Instruction_Button")
+        instructions.zPosition = 3
         
-        let userDefaults = UserDefaults.standard
-        
-        if userDefaults.bool(forKey: "hard"){
-            difficultyLabelNode.text = "Hard"
-        } else{
-            difficultyLabelNode.text = "Easy"
-        }
-        
-        
+        exitButtonNode = self.childNode(withName: "exitButton") as! SKSpriteNode
+        exitButtonNode.texture = SKTexture(imageNamed: "Exit_Button")
+        exitButtonNode.zPosition = 3
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,25 +48,21 @@ class MenuScene: SKScene {
                 let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                 let gameScene = GameScene(size: self.size)
                 self.view?.presentScene(gameScene, transition: transition)
-                
-            } else if nodesArray.first?.name == "difficultyButton"{
-                changeDifficulty()
-            }
-        }
-    }
-    
-    func changeDifficulty() {
-        let userDefaults = UserDefaults.standard
-       
-        if difficultyLabelNode.text == "Easy" {
-            difficultyLabelNode.text = "Hard"
-            userDefaults.set(true, forKey: "hard")
-        }else{
-            difficultyLabelNode.text = "Easy"
-            userDefaults.set(true, forKey: "hard")
-        }
-        
-        userDefaults.synchronize()
 
+            }
+            
+            if nodesArray.first?.name == "instructions" {
+                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                let instructionsScene = SKScene(fileNamed: "InstructionsScene") as! InstructionsScene
+                self.view?.presentScene(instructionsScene, transition: transition)
+                
+            }
+            
+            if nodesArray.first?.name == "exitButton" {
+                exit(0)
+            }
+                
+        }
     }
 }
+
