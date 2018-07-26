@@ -39,6 +39,17 @@ class InstructionsScene: SKScene {
             if nodesArray.first?.name == "nextButton" {
                 instructionsImageNode.texture = SKTexture(imageNamed: "Instructions2")
             }
+            if nodesArray.first?.name == "backButton" {
+                if(instructionsImageNode.texture == SKTexture(imageNamed: "Instructions2")){
+                    
+                    instructionsImageNode.texture = SKTexture(imageNamed: "Instructions1")
+                }else{
+                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                    let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
+                    self.view?.presentScene(menuScene, transition: transition)
+                }
+                    
+            }
         }
     }
 }
