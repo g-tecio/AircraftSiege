@@ -24,16 +24,16 @@ class MenuScene: SKScene {
         menuScreenNode.zPosition = 2
         
         newGameButtonNode = self.childNode(withName: "newGameButton") as! SKSpriteNode
-        newGameButtonNode.texture = SKTexture(imageNamed: "Play_Button")
+        newGameButtonNode.texture = SKTexture(imageNamed: "Play Button")
         newGameButtonNode.zPosition = 3
 
         
         instructions = self.childNode(withName: "instructions") as! SKSpriteNode
-        instructions.texture = SKTexture(imageNamed: "Instruction_Button")
+        instructions.texture = SKTexture(imageNamed: "Instructions Button")
         instructions.zPosition = 3
         
         exitButtonNode = self.childNode(withName: "exitButton") as! SKSpriteNode
-        exitButtonNode.texture = SKTexture(imageNamed: "Exit_Button")
+        exitButtonNode.texture = SKTexture(imageNamed: "Exit Button")
         exitButtonNode.zPosition = 3
 
     }

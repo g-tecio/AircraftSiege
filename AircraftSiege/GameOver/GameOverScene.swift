@@ -24,7 +24,7 @@ class GameOverScene: SKScene {
         newGameButtonNode.texture = SKTexture(imageNamed: "Replay Button")
         
         mainMenu = self.childNode(withName: "btnMainMenu") as! SKSpriteNode
-        mainMenu.texture = SKTexture(imageNamed: "Return Button-1")
+        mainMenu.texture = SKTexture(imageNamed: "Return Button")
         
     }
     

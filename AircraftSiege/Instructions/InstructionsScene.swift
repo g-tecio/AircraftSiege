@@ -11,6 +11,7 @@ import SpriteKit
 class InstructionsScene: SKScene {
     
     var backButtonNode:SKSpriteNode!
+    var closeButton:SKSpriteNode!
     var nextScreenNode:SKSpriteNode!
     var instructionsImageNode:SKSpriteNode!
     
@@ -19,10 +20,15 @@ class InstructionsScene: SKScene {
         backButtonNode = self.childNode(withName: "backButton") as! SKSpriteNode
         backButtonNode.texture = SKTexture(imageNamed: "Return Button")
         backButtonNode.zPosition = 3
+        backButtonNode.isHidden = true
         
         nextScreenNode = self.childNode(withName: "nextButton") as! SKSpriteNode
         nextScreenNode.texture = SKTexture(imageNamed: "Return Button")
         nextScreenNode.zPosition = 3
+        
+        closeButton = self.childNode(withName: "closeButton") as! SKSpriteNode
+        closeButton.texture = SKTexture(imageNamed: "Exit Button")
+        closeButton.zPosition = 3
         
         instructionsImageNode = self.childNode(withName: "instructionsImage") as! SKSpriteNode
         instructionsImageNode.texture = SKTexture(imageNamed: "Instructions1")
@@ -38,17 +44,21 @@ class InstructionsScene: SKScene {
             
             if nodesArray.first?.name == "nextButton" {
                 instructionsImageNode.texture = SKTexture(imageNamed: "Instructions2")
+                nextScreenNode.isHidden = true
+                backButtonNode.isHidden = false
+                
             }
             if nodesArray.first?.name == "backButton" {
-                if(instructionsImageNode.texture == SKTexture(imageNamed: "Instructions2")){
-                    
+          
                     instructionsImageNode.texture = SKTexture(imageNamed: "Instructions1")
-                }else{
-                    let transition = SKTransition.flipHorizontal(withDuration: 0.5)
-                    let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
-                    self.view?.presentScene(menuScene, transition: transition)
-                }
-                    
+                    nextScreenNode.isHidden = false
+                    backButtonNode.isHidden = true
+        
+            }
+            if nodesArray.first?.name == "closeButton"{
+                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
+                self.view?.presentScene(menuScene, transition: transition)
             }
         }
     }
