@@ -15,7 +15,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var starfield:SKEmitterNode!
     var player:SKSpriteNode!
     var scoreLabel:SKLabelNode!
-    
     var score:Int = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
@@ -43,7 +42,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didMove(to view: SKView) {
-        
+
         addLives()
         
         starfield = SKEmitterNode(fileNamed: "Starfield")
@@ -205,6 +204,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
     }
+
     
     
     func didBegin(_ contact: SKPhysicsContact) {
