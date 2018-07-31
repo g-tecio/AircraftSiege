@@ -11,6 +11,10 @@ import GameplayKit
 import CoreMotion
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    //TIMER
+    var timer = Timer()
+    var seconds = 0
+    
     
     var starfield:SKEmitterNode!
     var player:SKSpriteNode!
@@ -39,7 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var timeInterval = 0.75
     
     var initialScore = 100
-    
+
     
     override func didMove(to view: SKView) {
 
@@ -48,9 +52,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         starfield = SKEmitterNode(fileNamed: "Starfield")
         starfield.position = CGPoint(x: 0, y: 1472)
         starfield.advanceSimulationTime(10)
+   
         self.addChild(starfield)
         
-        //starfield.zPosition = -1
+        starfield.zPosition = -1
         
         player = SKSpriteNode(imageNamed: "shuttle")
         
@@ -68,25 +73,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.position = CGPoint(x: 80, y: self.frame.size.height - 70)
         scoreLabel.fontName = "AmericanTypewriter-Bold"
         scoreLabel.fontSize = 28
-        scoreLabel.fontColor = UIColor.white
+        scoreLabel.fontColor = UIColor.black
         score = 0
         
         self.addChild(scoreLabel)
         
+      /*
+        timerLabel = SKLabelNode(text: "Seconds: 0")
+        timerLabel.position = CGPoint(x: 80, y: self.frame.size.height - 150)
+        timerLabel.fontName = "AmericanTypewriter-Bold"
+        timerLabel.fontSize = 28
+        timerLabel.fontColor = UIColor.black
+ 
+        self.addChild(timerLabel)
+        */
         
         messageLabel = SKLabelNode(text: "Next Level")
         messageLabel.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.width/2)
         messageLabel.fontName = "AmericanTypewriter-Bold"
         messageLabel.fontSize = 28
-        messageLabel.fontColor = UIColor.white
+        messageLabel.fontColor = UIColor.black
         messageLabel.isHidden = true
         
         self.addChild(messageLabel)
         
-        
-        //        if UserDefaults.standard.bool(forKey: "hard"){
-        //            timeInterval = 0.3
-        //        }
+    /*
+        // change to desired number of seconds (in this case 5 seconds)
+        let when = DispatchTime.now() + 5
+        DispatchQueue.main.asyncAfter(deadline: when){
+            // your code with delay
+            messageLabel.dismiss
+            messageLabel.dismiss(animated: true, completion: nil)
+        }
+ */
+
         self.backgroundColor=UIColor(red:0.54, green:0.90, blue:1.00, alpha:1.0)
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
         
@@ -103,14 +123,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+
         
         
     }
+    
+    //ADD THIS METHOD
+    @objc func clock() {
+        seconds=seconds+1
+       // timerLabel.text=String(seconds)
+        if (seconds==5){
+             self.backgroundColor=UIColor(red:0.46, green:0.84, blue:0.89, alpha:1.0)
+               //  starfield.particleSpeed = 500
+            
+           print(starfield.particleScale)
+        }
+    }
+    
+    func random(min: Double, max: Double) -> Double {
+        return Double(arc4random_uniform(UInt32(max - min + 1))) + min
+   
+    }
+    
     func addLives() {
         livesArray = [SKSpriteNode]()
         
         for live in 1 ... 3 {
-            let liveNode = SKSpriteNode(imageNamed: "shuttle")
+            let liveNode = SKSpriteNode(imageNamed: "Life Icon")
             liveNode.position = CGPoint(x: self.frame.size.width - CGFloat(4 - live) * liveNode.size.width, y: self.frame.size.height - 60 )
             liveNode.zPosition = 3
             self.addChild(liveNode)
@@ -121,7 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func addAlien () {
         possibleAliens = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAliens) as! [String]
-        
+        starfield.particleScale = CGFloat(random(min: 1, max: 3))
         let alien = SKSpriteNode(imageNamed: possibleAliens[0])
         
         let randomAlienPosition = GKRandomDistribution(lowestValue: 10, highestValue: 380)
@@ -146,13 +185,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
         
         actionArray.append(SKAction.run {
-            self.run(SKAction.playSoundFileNamed("loose.wav", waitForCompletion: false))
+            self.run(SKAction.playSoundFileNamed("sfx_lose.wav", waitForCompletion: false))
             if self.livesArray.count > 0 {
                 let liveNode = self.livesArray.first
                 liveNode!.removeFromParent()
                 self.livesArray.removeFirst()
                 
                 if self.livesArray.count == 0{
+                   // self.backgroundMusic.run(SKAction.stop())
                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                     let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
                     gameOver.score = self.score
@@ -175,7 +215,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func fireTorpedo() {
-        self.run(SKAction.playSoundFileNamed("torpedo.mp3", waitForCompletion: false))
+        self.run(SKAction.playSoundFileNamed("sfx_blaster.mp3", waitForCompletion: false))
         
         let torpedoNode = SKSpriteNode(imageNamed: "torpedo")
         torpedoNode.position = player.position
@@ -232,7 +272,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         explosion.position = alienNode.position
         self.addChild(explosion)
         
-        self.run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false))
+        self.run(SKAction.playSoundFileNamed("sfx_explosion.mp3", waitForCompletion: false))
         
         torpedoNode.removeFromParent()
         alienNode.removeFromParent()

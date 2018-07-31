@@ -27,7 +27,6 @@ class MenuScene: SKScene {
         newGameButtonNode.texture = SKTexture(imageNamed: "Play Button")
         newGameButtonNode.zPosition = 3
 
-        
         instructions = self.childNode(withName: "instructions") as! SKSpriteNode
         instructions.texture = SKTexture(imageNamed: "Instructions Button")
         instructions.zPosition = 3
