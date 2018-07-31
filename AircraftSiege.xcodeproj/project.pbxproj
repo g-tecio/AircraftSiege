@@ -12,6 +12,8 @@
 		DE6319E1210A506A00C676C3 /* InstructionsScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE6319E0210A506A00C676C3 /* InstructionsScene.sks */; };
 		DE6319E3210A507800C676C3 /* InstructionsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6319E2210A507800C676C3 /* InstructionsScene.swift */; };
 		DE6319EE210A50F600C676C3 /* sfx_blaster.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE6319EB210A50F600C676C3 /* sfx_blaster.mp3 */; };
+		DE73D4EE2110DC3100286DB8 /* medium_clouds.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE73D4ED2110DC3100286DB8 /* medium_clouds.sks */; };
+		DE73D4F02110DC4100286DB8 /* small_clouds.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE73D4EF2110DC4100286DB8 /* small_clouds.sks */; };
 		DE99ED9B21079F1400861766 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99ED9A21079F1400861766 /* AppDelegate.swift */; };
 		DE99ED9F21079F1400861766 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99ED9E21079F1400861766 /* Actions.sks */; };
 		DE99EDA321079F1400861766 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDA221079F1400861766 /* GameViewController.swift */; };
@@ -20,7 +22,7 @@
 		DE99EDAB21079F1A00861766 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDA921079F1A00861766 /* LaunchScreen.storyboard */; };
 		DE99EDB521079FCC00861766 /* sfx_explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB221079FCC00861766 /* sfx_explosion.mp3 */; };
 		DE99EDB621079FCC00861766 /* sfx_lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB321079FCC00861766 /* sfx_lose.wav */; };
-		DE99EDBC2107A02700861766 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB92107A02700861766 /* Starfield.sks */; };
+		DE99EDBC2107A02700861766 /* big_clouds.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDB92107A02700861766 /* big_clouds.sks */; };
 		DE99EDBD2107A02700861766 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDBA2107A02700861766 /* spark.png */; };
 		DE99EDBE2107A02700861766 /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = DE99EDBB2107A02700861766 /* Explosion.sks */; };
 		DE99EDCF2107A36E00861766 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE99EDCD2107A36E00861766 /* MenuScene.swift */; };
@@ -36,6 +38,8 @@
 		DE6319E0210A506A00C676C3 /* InstructionsScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = InstructionsScene.sks; sourceTree = "<group>"; };
 		DE6319E2210A507800C676C3 /* InstructionsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsScene.swift; sourceTree = "<group>"; };
 		DE6319EB210A50F600C676C3 /* sfx_blaster.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_blaster.mp3; sourceTree = "<group>"; };
+		DE73D4ED2110DC3100286DB8 /* medium_clouds.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = medium_clouds.sks; sourceTree = "<group>"; };
+		DE73D4EF2110DC4100286DB8 /* small_clouds.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = small_clouds.sks; sourceTree = "<group>"; };
 		DE99ED9721079F1400861766 /* AircraftSiege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AircraftSiege.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE99ED9A21079F1400861766 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE99ED9E21079F1400861766 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -46,7 +50,7 @@
 		DE99EDAC21079F1A00861766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE99EDB221079FCC00861766 /* sfx_explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sfx_explosion.mp3; sourceTree = "<group>"; };
 		DE99EDB321079FCC00861766 /* sfx_lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sfx_lose.wav; sourceTree = "<group>"; };
-		DE99EDB92107A02700861766 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		DE99EDB92107A02700861766 /* big_clouds.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = big_clouds.sks; sourceTree = "<group>"; };
 		DE99EDBA2107A02700861766 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		DE99EDBB2107A02700861766 /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		DE99EDCD2107A36E00861766 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
@@ -126,9 +130,11 @@
 		DE99EDBF2107A03600861766 /* Emmiters */ = {
 			isa = PBXGroup;
 			children = (
+				DE73D4EF2110DC4100286DB8 /* small_clouds.sks */,
+				DE73D4ED2110DC3100286DB8 /* medium_clouds.sks */,
+				DE99EDB92107A02700861766 /* big_clouds.sks */,
 				DE99EDBB2107A02700861766 /* Explosion.sks */,
 				DE99EDBA2107A02700861766 /* spark.png */,
-				DE99EDB92107A02700861766 /* Starfield.sks */,
 			);
 			path = Emmiters;
 			sourceTree = "<group>";
@@ -228,9 +234,11 @@
 				DE99EDBD2107A02700861766 /* spark.png in Resources */,
 				DE6319E1210A506A00C676C3 /* InstructionsScene.sks in Resources */,
 				DE6319EE210A50F600C676C3 /* sfx_blaster.mp3 in Resources */,
+				DE73D4EE2110DC3100286DB8 /* medium_clouds.sks in Resources */,
+				DE73D4F02110DC4100286DB8 /* small_clouds.sks in Resources */,
 				DE99EDD02107A36E00861766 /* MenuScene.sks in Resources */,
 				DE99EDAB21079F1A00861766 /* LaunchScreen.storyboard in Resources */,
-				DE99EDBC2107A02700861766 /* Starfield.sks in Resources */,
+				DE99EDBC2107A02700861766 /* big_clouds.sks in Resources */,
 				DE6319DF210A3C6300C676C3 /* GameScene.sks in Resources */,
 				DE99ED9F21079F1400861766 /* Actions.sks in Resources */,
 			);
