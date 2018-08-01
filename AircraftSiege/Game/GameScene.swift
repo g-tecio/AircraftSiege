@@ -14,8 +14,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //TIMER
     var timer = Timer()
     var seconds = 0
-    
-    
     var starfield:SKEmitterNode!
     var smallClouds:SKEmitterNode!
     var mediumClouds:SKEmitterNode!
@@ -23,6 +21,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabel:SKLabelNode!
     var timerLabel:SKLabelNode!
     var backgroundMusic: SKAudioNode!
+    
+    
+    var red:CGFloat = 0.40
+    var green:CGFloat = 0.78
+    var blue:CGFloat = 0.98
+    
     
     var score:Int = 0 {
         didSet {
@@ -130,8 +134,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
  */
 
-        self.backgroundColor=UIColor(red:0.40, green:0.78, blue:0.92, alpha:1.0)
+        self.backgroundColor=UIColor(red: red, green: green, blue: blue, alpha: 1.0)
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
+        //gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(changeBackground), userInfo: nil, repeats: true)
         
         print("tiempo\(timeInterval)")
         print(gameTimer)
@@ -151,6 +156,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    
+    
+//     @objc func changeBackground() {
+//
+//        for _ in 1...10{
+//            self.backgroundColor=UIColor(red: red - 0.01, green: green - 0.01, blue: blue - 0.02, alpha: 1.0)
+//            print(backgroundColor)
+//        }
+//    }
+    
+    
+    
     //ADD THIS METHOD
     @objc func clock() {
         seconds=seconds+1
@@ -158,37 +175,111 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         
-        for _ in seconds...seconds+10{
-             self.backgroundColor=UIColor(red:0.40 - 0.01 , green:0.78 - 0.02, blue:0.92 - 0.02, alpha:1.0)
+        
+        
+//
+//            for _ in 1...20 {
+//                print("Antes", backgroundColor)
+//           red = red - 0.01
+//           green = green - 0.01
+//           blue = blue - 0.02
+//
+//           self.backgroundColor=UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+//                print("Despues", backgroundColor)
+//            }
+        
+        
+        
+        /*
+        let red:CGFloat = 0.40
+        let green:CGFloat = 0.78
+        let blue:CGFloat = 0.98
+       var bacgroundColor=UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+
+        
+        self.backgroundColor=bacgroundColor
+        
+        for _ in 1...20 {
+           bacgroundColor=UIColor(red: red - 0.01, green: green - 0.01, blue: blue - 0.02, alpha: 1.0)
+            print(bacgroundColor)
             
         }
+          */
         
         
         
-//        switch seconds {
-//        case 5:
-//            self.backgroundColor=UIColor(red:0.40, green:0.78, blue:0.92, alpha:1.0)
-//        case 10:
-//            self.backgroundColor=UIColor(red:0.38, green:0.74, blue:0.88, alpha:1.0)
-//        case 15:
-//            self.backgroundColor=UIColor(red:0.36, green:0.70, blue:0.84, alpha:1.0)
-//        case 20:
-//            self.backgroundColor=UIColor(red:0.34, green:0.66, blue:0.80, alpha:1.0)
-//        case 30:
-//            self.backgroundColor=UIColor(red:0.32, green:0.62, blue:0.76, alpha:1.0)
-//        case 35:
-//            self.backgroundColor=UIColor(red:0.30, green:0.58, blue:0.72, alpha:1.0)
-//        case 40:
-//            self.backgroundColor=UIColor(red:0.28, green:0.54, blue:0.68, alpha:1.0)
-//        case 45:
-//            self.backgroundColor=UIColor(red:0.26, green:0.50, blue:0.64, alpha:1.0)
-//        case 50:
-//            self.backgroundColor=UIColor(red:0.24, green:0.46, blue:0.60, alpha:1.0)
-//        case 55:
-//            self.backgroundColor=UIColor(red:0.22, green:0.42, blue:0.56, alpha:1.0)
-//        default:
-//           print(seconds)
-//        }
+        
+        switch seconds {
+        case 1:
+            self.backgroundColor=UIColor(red:0.40, green:0.78, blue:0.92, alpha:1.0)
+        case 2:
+            self.backgroundColor=UIColor(red:0.39, green:0.77, blue:0.92, alpha:1.0)
+        case 3:
+            self.backgroundColor=UIColor(red:0.38, green:0.76, blue:0.92, alpha:1.0)
+        case 4:
+            self.backgroundColor=UIColor(red:0.37, green:0.75, blue:0.92, alpha:1.0)
+        case 5:
+            self.backgroundColor=UIColor(red:0.36, green:0.74, blue:0.92, alpha:1.0)
+        case 6:
+            self.backgroundColor=UIColor(red:0.35, green:0.73, blue:0.92, alpha:1.0)
+        case 7:
+            self.backgroundColor=UIColor(red:0.34, green:0.72, blue:0.92, alpha:1.0)
+        case 8:
+            self.backgroundColor=UIColor(red:0.33, green:0.71, blue:0.92, alpha:1.0)
+        case 9:
+            self.backgroundColor=UIColor(red:0.32, green:0.70, blue:0.92, alpha:1.0)
+        case 10:
+            self.backgroundColor=UIColor(red:0.31, green:0.69, blue:0.92, alpha:1.0)
+            
+            
+        case 11:
+            self.backgroundColor=UIColor(red:0.30, green:0.68, blue:0.92, alpha:1.0)
+        case 12:
+            self.backgroundColor=UIColor(red:0.29, green:0.67, blue:0.92, alpha:1.0)
+        case 13:
+            self.backgroundColor=UIColor(red:0.28, green:0.66, blue:0.92, alpha:1.0)
+        case 14:
+            self.backgroundColor=UIColor(red:0.27, green:0.65, blue:0.92, alpha:1.0)
+        case 15:
+            self.backgroundColor=UIColor(red:0.26, green:0.64, blue:0.92, alpha:1.0)
+        case 16:
+            self.backgroundColor=UIColor(red:0.25, green:0.63, blue:0.92, alpha:1.0)
+        case 17:
+            self.backgroundColor=UIColor(red:0.24, green:0.62, blue:0.92, alpha:1.0)
+        case 18:
+            self.backgroundColor=UIColor(red:0.23, green:0.61, blue:0.92, alpha:1.0)
+        case 19:
+            self.backgroundColor=UIColor(red:0.22, green:0.60, blue:0.92, alpha:1.0)
+        case 20:
+            self.backgroundColor=UIColor(red:0.21, green:0.59, blue:0.92, alpha:1.0)
+            
+            
+        case 21:
+            self.backgroundColor=UIColor(red:0.20, green:0.58, blue:0.92, alpha:1.0)
+        case 22:
+            self.backgroundColor=UIColor(red:0.19, green:0.57, blue:0.92, alpha:1.0)
+        case 23:
+            self.backgroundColor=UIColor(red:0.18, green:0.56, blue:0.92, alpha:1.0)
+        case 24:
+            self.backgroundColor=UIColor(red:0.17, green:0.55, blue:0.92, alpha:1.0)
+        case 25:
+            self.backgroundColor=UIColor(red:0.16, green:0.54, blue:0.92, alpha:1.0)
+        case 26:
+            self.backgroundColor=UIColor(red:0.15, green:0.53, blue:0.92, alpha:1.0)
+        case 27:
+            self.backgroundColor=UIColor(red:0.14, green:0.52, blue:0.92, alpha:1.0)
+        case 28:
+            self.backgroundColor=UIColor(red:0.13, green:0.51, blue:0.92, alpha:1.0)
+        case 29:
+            self.backgroundColor=UIColor(red:0.12, green:0.50, blue:0.92, alpha:1.0)
+        case 30:
+            self.backgroundColor=UIColor(red:0.11, green:0.49, blue:0.92, alpha:1.0)
+            
+            
+            
+        default:
+           print(seconds)
+        }
 
         
        //timerLabel.text=String(seconds)
@@ -265,9 +356,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if self.livesArray.count == 0{
                    // self.backgroundMusic.run(SKAction.stop())
+                   // timer.invalidate()
                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                     let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
                     gameOver.score = self.score
+                    self.timer.invalidate()
                     self.view?.presentScene(gameOver, transition: transition)
                 }
             }
