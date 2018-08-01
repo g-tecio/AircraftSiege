@@ -46,6 +46,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var initialScore = 100
 
+    var red:CGFloat = 0.40
+    var green:CGFloat = 0.78
+    var blue:CGFloat = 0.92
     
     override func didMove(to view: SKView) {
 
@@ -121,7 +124,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
  */
 
-        self.backgroundColor=UIColor(red:0.40, green:0.78, blue:0.92, alpha:1.0)
+        self.backgroundColor=UIColor(red: red, green: green, blue: blue, alpha:1.0)
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
         
         print("tiempo\(timeInterval)")
@@ -147,13 +150,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         seconds=seconds+1
         print(seconds)
         
+        UIView.animate(withDuration: 2, delay: 0.0, options:[UIViewAnimationOptions.repeat, UIViewAnimationOptions.autoreverse], animations: {
+            self.backgroundColor = UIColor(red: self.red - 0.01, green: self.green - 0.01, blue: self.blue - 0.02, alpha: 1)
+        }, completion: nil)
         
-        
-        for _ in seconds...seconds+10{
-             self.backgroundColor=UIColor(red:0.40 - 0.01 , green:0.78 - 0.02, blue:0.92 - 0.02, alpha:1.0)
-            
-        }
-        
+//        for _ in seconds...seconds+2{
+//            red = red - 0.01
+//            green = green - 0.01
+//            blue = blue - 0.02
+//             self.backgroundColor=UIColor(red: red, green: green, blue: blue, alpha:1.0)
+//            print(backgroundColor)
+//        }
+//
         
         
 //        switch seconds {
