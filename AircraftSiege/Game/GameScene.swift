@@ -19,6 +19,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var mediumClouds:SKEmitterNode!
     var player:SKSpriteNode!
     var scoreLabel:SKLabelNode!
+    var vul = true
     var score:Int = 0 {
         didSet {
             scoreLabel.zPosition = 3
@@ -350,13 +351,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if self.livesArray.count > 0 {
                 let liveNode = self.livesArray.first
                 liveNode!.removeFromParent()
-                self.livesArray.removeFirst()
-                var vul=true
                 
-                if vul{
-                    print("Es Inmune")
+               if self.vul{
+                    
+                self.livesArray.removeFirst()
+                self.vul = false
+               }else{
+                
                     self.player.run(self.blinkAnimation())
+                
+                    self.vul = true
                 }
+            
+                
        
                 if self.livesArray.count == 0{
                    // self.backgroundMusic.run(SKAction.stop())
@@ -381,7 +388,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let fadeOut = SKAction.fadeAlpha(to: 0.0, duration: duration)
         let fadeIn = SKAction.fadeAlpha(to: 1.0, duration: duration)
         let blink = SKAction.sequence([fadeOut, fadeIn])
-        return SKAction.repeatForever(blink)
+        return SKAction.repeat(blink, count: 2)
         
     }
     
