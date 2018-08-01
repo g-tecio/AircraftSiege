@@ -339,7 +339,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(alien)
         
-        let animationDuration:TimeInterval = 6
+        var animationDuration:TimeInterval = 6
         
         var actionArray = [SKAction]()
         
@@ -348,23 +348,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         actionArray.append(SKAction.run {
             self.run(SKAction.playSoundFileNamed("sfx_lose.wav", waitForCompletion: false))
+            
+             self.player.run(self.blinkAnimation())
+            if(self.player.hasActions()){
+                print("holiiii")
+            }else{
+           
             if self.livesArray.count > 0 {
                 let liveNode = self.livesArray.first
                 liveNode!.removeFromParent()
-                
-               if self.vul{
-                    
+ 
                 self.livesArray.removeFirst()
-                self.vul = false
-               }else{
-                
-                    self.player.run(self.blinkAnimation())
-                
-                    self.vul = true
-                }
-            
-                
-       
+               
+          
                 if self.livesArray.count == 0{
                    // self.backgroundMusic.run(SKAction.stop())
                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
@@ -374,6 +370,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.view?.presentScene(gameOver, transition: transition)
                 }
             }
+            }
+            
         })
         
         actionArray.append(SKAction.removeFromParent())
@@ -388,7 +386,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let fadeOut = SKAction.fadeAlpha(to: 0.0, duration: duration)
         let fadeIn = SKAction.fadeAlpha(to: 1.0, duration: duration)
         let blink = SKAction.sequence([fadeOut, fadeIn])
-        return SKAction.repeat(blink, count: 2)
+        vul=false
+        return SKAction.repeat(blink, count: 4)
         
     }
     
