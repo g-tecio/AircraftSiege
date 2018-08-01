@@ -30,6 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var score:Int = 0 {
         didSet {
+            scoreLabel.zPosition = 3
             scoreLabel.text = "Score: \(score)"
         }
     }
@@ -90,7 +91,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.addChild(player)
         
-        
+
         
         
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
@@ -156,7 +157,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    
+
     
 //     @objc func changeBackground() {
 //
@@ -353,10 +354,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let liveNode = self.livesArray.first
                 liveNode!.removeFromParent()
                 self.livesArray.removeFirst()
+                var vul=true
                 
+                if vul{
+                    print("Es Inmune")
+                    self.player.run(self.blinkAnimation())
+                }
+       
                 if self.livesArray.count == 0{
                    // self.backgroundMusic.run(SKAction.stop())
-                   // timer.invalidate()
                     let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                     let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
                     gameOver.score = self.score
@@ -373,6 +379,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func blinkAnimation() -> SKAction{
+        let duration = 0.4
+        let fadeOut = SKAction.fadeAlpha(to: 0.0, duration: duration)
+        let fadeIn = SKAction.fadeAlpha(to: 1.0, duration: duration)
+        let blink = SKAction.sequence([fadeOut, fadeIn])
+        return SKAction.repeatForever(blink)
+        
+    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireTorpedo()
@@ -434,6 +448,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let explosion = SKEmitterNode(fileNamed: "Explosion")!
         explosion.position = alienNode.position
+        explosion.zPosition = 2
         self.addChild(explosion)
         
         self.run(SKAction.playSoundFileNamed("sfx_explosion.mp3", waitForCompletion: false))
