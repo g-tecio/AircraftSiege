@@ -126,7 +126,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         self.backgroundColor=UIColor(red: red, green: green, blue: blue, alpha:1.0)
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
-        //gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(changeBackground), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(clock), userInfo: nil, repeats: true)
         
         print("tiempo\(timeInterval)")
         print(gameTimer)
@@ -342,24 +342,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
         
         actionArray.append(SKAction.run {
-            self.run(SKAction.playSoundFileNamed("sfx_lose.wav", waitForCompletion: false))
+          
+            
             if self.livesArray.count > 0 {
                 if (!self.player.hasActions()){
-                    
-               
                 let liveNode = self.livesArray.first
                 liveNode!.removeFromParent()
-                
                 self.livesArray.removeFirst()
-                }else{
-                
-            self.player.run(self.blinkAnimation(),
-                                //After action is done, just call the completion-handler.
-                completion: {
-                 
-                        
+                      self.run(SKAction.playSoundFileNamed("sfx_lose.wav", waitForCompletion: false))
+                    
+                    if self.livesArray.count == 0 {
+                        let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                        let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
+                        gameOver.score = self.score
+                         self.view?.presentScene(gameOver, transition: transition)
+                    }
+                    
+                    
+                    self.player.run(self.blinkAnimation(),completion: {
                         if self.livesArray.count == 0{
-                            // self.backgroundMusic.run(SKAction.stop())
                             let transition = SKTransition.flipHorizontal(withDuration: 0.5)
                             let gameOver = SKScene(fileNamed: "GameOverScene") as! GameOverScene
                             gameOver.score = self.score
@@ -368,14 +369,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             
                         }
                 })
-            }
+                  }
             }
         
             
         })
         
         actionArray.append(SKAction.removeFromParent())
-        
         alien.run(SKAction.sequence(actionArray))
         
         
