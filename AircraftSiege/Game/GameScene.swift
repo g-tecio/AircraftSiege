@@ -30,6 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var messageLabel:SKLabelNode!
     
     var gameTimer:Timer!
+    var colorTimer:Timer!
     
     var possibleAliens = ["alien", "alien2", "alien3", "alien4"]
     
@@ -51,7 +52,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var blue:CGFloat = 0.92
     
     override func didMove(to view: SKView) {
-
+        
+        let gradientBG = CAGradientLayer()
+        gradientBG.frame = (self.view?.bounds)!
+        gradientBG.colors = [SKColor.black, SKColor.cyan]
+        gradientBG.locations = [0.0, 0.5]
+        gradientBG.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradientBG.endPoint = CGPoint(x: 1.0, y: 0.0)
+        gradientBG.zPosition = 1
+        
+        self.scene?.view?.layer.addSublayer(gradientBG)
+        
         addLives()
         
         starfield = SKEmitterNode(fileNamed: "big_clouds")
@@ -75,7 +86,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         player = SKSpriteNode(imageNamed: "shuttle")
-        
+        player.zPosition = 1
         player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 20)
         
         self.addChild(player)
@@ -126,7 +137,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         self.backgroundColor=UIColor(red: red, green: green, blue: blue, alpha:1.0)
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
-        gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(clock), userInfo: nil, repeats: true)
+        colorTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(changeBackground), userInfo: nil, repeats: true)
+      
+  
+
+    
         
         print("tiempo\(timeInterval)")
         print(gameTimer)
@@ -140,28 +155,43 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.xAcceleration = CGFloat(acceleration.x) * 0.75 + self.xAcceleration * 0.25
             }
         }
-        
-
-        
-        
     }
     
 
-    
-//     @objc func changeBackground() {
+//    let gradient CAGradientLayer = {
+//        let g = CAGradientLayer()
+//        g.colors = [UIColor(red:1, green:0.71, blue:0, alpha:1).cgColor, red:0.95, green:0.69, blue:0.69, alpha:1).cgColor]
+//        return g
+//    }()
 //
-//        for _ in 1...10{
-//            self.backgroundColor=UIColor(red: red - 0.01, green: green - 0.01, blue: blue - 0.02, alpha: 1.0)
-//            print(backgroundColor)
-//        }
-//    }
+//    gradient.frame = inputsContainer.bounds
+//
+//    inputsContainer.layer.insertSublayer(gradient, at: 0)
+    
+     @objc func changeBackground() {
+        
+        red = red - 0.01
+        green = green - 0.01
+
+        self.backgroundColor=UIColor(red: red - 0.01, green: green - 0.01, blue: blue, alpha: 1.0)
+        print(backgroundColor)
+        
+        if (red <= 0.05 || green == 0.43 ) {
+            
+            colorTimer.invalidate()
+            print("Color Rojo impreso", red)
+        }
+    }
+    
+    
+    
     
     
     
     //ADD THIS METHOD
     @objc func clock() {
         seconds=seconds+1
-        print(seconds)
+        //print(seconds)
       
         
 //        for _ in seconds...seconds+2{
@@ -324,7 +354,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let position = CGFloat(randomAlienPosition.nextInt())
         
         alien.position = CGPoint(x: position, y: self.frame.size.height + alien.size.height)
-        
+        alien.zPosition = 2
         alien.physicsBody = SKPhysicsBody(rectangleOf: alien.size)
         alien.physicsBody?.isDynamic = true
         
@@ -391,8 +421,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        fireTorpedo()
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//
+//    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+         fireTorpedo()
     }
     
     
