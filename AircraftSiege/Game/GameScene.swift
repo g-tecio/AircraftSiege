@@ -235,572 +235,660 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         switch seconds {
             //De 8EB1FE a 8699C8
-        case 1:
-            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
+         case 1:
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0) //
         case 2:
-            self.backgroundColor=UIColor(red:0.56, green:0.68, blue:0.99, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 3:
-            self.backgroundColor=UIColor(red:0.56, green:0.68, blue:0.98, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 4:
-            self.backgroundColor=UIColor(red:0.55, green:0.68, blue:0.97, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 5:
-            self.backgroundColor=UIColor(red:0.55, green:0.67, blue:0.96, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 6:
-            self.backgroundColor=UIColor(red:0.55, green:0.67, blue:0.95, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 7:
-            self.backgroundColor=UIColor(red:0.55, green:0.66, blue:0.94, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 8:
-            self.backgroundColor=UIColor(red:0.55, green:0.66, blue:0.93, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
         case 9:
-            self.backgroundColor=UIColor(red:0.55, green:0.65, blue:0.92, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0) //
         case 10:
+            self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0)
+        case 11:
+            self.backgroundColor=UIColor(red:0.56, green:0.68, blue:0.99, alpha:1.0)
+        case 12:
+            self.backgroundColor=UIColor(red:0.56, green:0.68, blue:0.98, alpha:1.0)
+        case 13:
+            self.backgroundColor=UIColor(red:0.55, green:0.68, blue:0.97, alpha:1.0)
+        case 14:
+            self.backgroundColor=UIColor(red:0.55, green:0.67, blue:0.96, alpha:1.0)
+        case 15:
+            self.backgroundColor=UIColor(red:0.55, green:0.67, blue:0.95, alpha:1.0)
+        case 16:
+            self.backgroundColor=UIColor(red:0.55, green:0.66, blue:0.94, alpha:1.0)
+        case 17:
+            self.backgroundColor=UIColor(red:0.55, green:0.66, blue:0.93, alpha:1.0)
+        case 18:
+            self.backgroundColor=UIColor(red:0.55, green:0.65, blue:0.92, alpha:1.0)
+        case 19:
+            self.backgroundColor=UIColor(red:0.55, green:0.65, blue:0.91, alpha:1.0)
+        case 20:
             self.backgroundColor=UIColor(red:0.55, green:0.65, blue:0.91, alpha:1.0)
             
             
-        case 11:
+        case 21:
             self.backgroundColor=UIColor(red:0.55, green:0.65, blue:0.90, alpha:1.0)
-        case 12:
+        case 22:
             self.backgroundColor=UIColor(red:0.54, green:0.64, blue:0.89, alpha:1.0)
-        case 13:
+        case 23:
             self.backgroundColor=UIColor(red:0.54, green:0.64, blue:0.88, alpha:1.0)
-        case 14:
+        case 24:
             self.backgroundColor=UIColor(red:0.54, green:0.64, blue:0.87, alpha:1.0)
-        case 15:
+        case 25:
             self.backgroundColor=UIColor(red:0.54, green:0.63, blue:0.86, alpha:1.0)
-        case 16:
+        case 26:
             self.backgroundColor=UIColor(red:0.54, green:0.63, blue:0.85, alpha:1.0)
-        case 17:
+        case 27:
             self.backgroundColor=UIColor(red:0.54, green:0.62, blue:0.84, alpha:1.0)
-        case 18:
+        case 28:
             self.backgroundColor=UIColor(red:0.54, green:0.62, blue:0.83, alpha:1.0)
-        case 19:
+        case 29:
             self.backgroundColor=UIColor(red:0.53, green:0.62, blue:0.82, alpha:1.0)
-        case 20:
+        case 30:
             self.backgroundColor=UIColor(red:0.53, green:0.61, blue:0.81, alpha:1.0)
             
             
-        case 21:
+        case 31:
             self.backgroundColor=UIColor(red:0.53, green:0.61, blue:0.80, alpha:1.0)
-        case 22:
+        case 32:
             self.backgroundColor=UIColor(red:0.53, green:0.60, blue:0.79, alpha:1.0)
-        case 23:
+        case 33:
             self.backgroundColor=UIColor(red:0.53, green:0.60, blue:0.78, alpha:1.0) // termina 8EB1FE-8699C8
-        case 24:
+        case 34:
             self.backgroundColor=UIColor(red:0.52, green:0.59, blue:0.77, alpha:1.0) // De 8699C8 a 637294
-        case 25:
+        case 35:
             self.backgroundColor=UIColor(red:0.51, green:0.59, blue:0.76, alpha:1.0)
-        case 26:
+        case 36:
             self.backgroundColor=UIColor(red:0.51, green:0.58, blue:0.75, alpha:1.0)
-        case 27:
+        case 37:
             self.backgroundColor=UIColor(red:0.50, green:0.57, blue:0.74, alpha:1.0)
-        case 28:
+        case 38:
             self.backgroundColor=UIColor(red:0.49, green:0.56, blue:0.73, alpha:1.0)
-        case 29:
+        case 39:
             self.backgroundColor=UIColor(red:0.49, green:0.55, blue:0.72, alpha:1.0)
-        case 30:
+        case 40:
             self.backgroundColor=UIColor(red:0.48, green:0.54, blue:0.71, alpha:1.0)
             
-        case 31:
+        case 41:
             self.backgroundColor=UIColor(red:0.47, green:0.54, blue:0.70, alpha:1.0)
-        case 32:
+        case 42:
             self.backgroundColor=UIColor(red:0.47, green:0.53, blue:0.69, alpha:1.0)
-        case 33:
+        case 43:
             self.backgroundColor=UIColor(red:0.46, green:0.52, blue:0.68, alpha:1.0)
-        case 34:
+        case 44:
             self.backgroundColor=UIColor(red:0.45, green:0.52, blue:0.67, alpha:1.0)
-        case 35:
+        case 45:
             self.backgroundColor=UIColor(red:0.44, green:0.51, blue:0.66, alpha:1.0)
-        case 36:
+        case 46:
             self.backgroundColor=UIColor(red:0.43, green:0.50, blue:0.65, alpha:1.0)
-        case 37:
+        case 47:
             self.backgroundColor=UIColor(red:0.43, green:0.49, blue:0.64, alpha:1.0)
-        case 38:
+        case 48:
             self.backgroundColor=UIColor(red:0.42, green:0.49, blue:0.63, alpha:1.0)
-        case 39:
+        case 49:
             self.backgroundColor=UIColor(red:0.41, green:0.48, blue:0.62, alpha:1.0)
-        case 40:
+        case 50:
             self.backgroundColor=UIColor(red:0.41, green:0.47, blue:0.61, alpha:1.0)
             
-        case 41:
+        case 51:
             self.backgroundColor=UIColor(red:0.40, green:0.46, blue:0.60, alpha:1.0)
-        case 42:
+        case 52:
             self.backgroundColor=UIColor(red:0.40, green:0.46, blue:0.59, alpha:1.0)
-        case 43:
+        case 53:
             self.backgroundColor=UIColor(red:0.39, green:0.45, blue:0.58, alpha:1.0) // termina 8699C8-637294
-        case 44:
+        case 54:
             self.backgroundColor=UIColor(red:0.38, green:0.44, blue:0.57, alpha:1.0) // De 637294 a 3C4F6F
-        case 45:
+        case 55:
             self.backgroundColor=UIColor(red:0.37, green:0.43, blue:0.56, alpha:1.0)
-        case 46:
+        case 56:
             self.backgroundColor=UIColor(red:0.36, green:0.42, blue:0.55, alpha:1.0)
-        case 47:
+        case 57:
             self.backgroundColor=UIColor(red:0.35, green:0.41, blue:0.54, alpha:1.0)
-        case 48:
+        case 58:
             self.backgroundColor=UIColor(red:0.34, green:0.40, blue:0.53, alpha:1.0)
-        case 49:
+        case 59:
             self.backgroundColor=UIColor(red:0.33, green:0.39, blue:0.52, alpha:1.0)
-        case 50:
+        case 60:
             self.backgroundColor=UIColor(red:0.32, green:0.38, blue:0.51, alpha:1.0)
             
-        case 51:
-            self.backgroundColor=UIColor(red:0.31, green:0.37, blue:0.50, alpha:1.0)
-        case 52:
-            self.backgroundColor=UIColor(red:0.30, green:0.36, blue:0.49, alpha:1.0)
-        case 53:
-            self.backgroundColor=UIColor(red:0.29, green:0.36, blue:0.49, alpha:1.0)
-        case 54:
-            self.backgroundColor=UIColor(red:0.28, green:0.35, blue:0.48, alpha:1.0)
-        case 55:
-            self.backgroundColor=UIColor(red:0.27, green:0.34, blue:0.47, alpha:1.0)
-        case 56:
-            self.backgroundColor=UIColor(red:0.26, green:0.33, blue:0.46, alpha:1.0)
-        case 57:
-            self.backgroundColor=UIColor(red:0.25, green:0.32, blue:0.45, alpha:1.0)
-        case 58:
-            self.backgroundColor=UIColor(red:0.24, green:0.31, blue:0.44, alpha:1.0) // termina 637294-3C4F6F
-        case 59:
-            self.backgroundColor=UIColor(red:0.24, green:0.30, blue:0.43, alpha:1.0) // De 3C4F6F a 161A25
-        case 60:
-            self.backgroundColor=UIColor(red:0.23, green:0.30, blue:0.42, alpha:1.0)
         case 61:
-            self.backgroundColor=UIColor(red:0.23, green:0.29, blue:0.41, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.31, green:0.37, blue:0.50, alpha:1.0)
         case 62:
-            self.backgroundColor=UIColor(red:0.22, green:0.28, blue:0.40, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.30, green:0.36, blue:0.49, alpha:1.0)
         case 63:
-            self.backgroundColor=UIColor(red:0.22, green:0.27, blue:0.39, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.29, green:0.36, blue:0.49, alpha:1.0)
         case 64:
-            self.backgroundColor=UIColor(red:0.21, green:0.26, blue:0.38, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.28, green:0.35, blue:0.48, alpha:1.0)
         case 65:
-            self.backgroundColor=UIColor(red:0.21, green:0.25, blue:0.37, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.27, green:0.34, blue:0.47, alpha:1.0)
         case 66:
-            self.backgroundColor=UIColor(red:0.20, green:0.24, blue:0.36, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.26, green:0.33, blue:0.46, alpha:1.0)
         case 67:
-            self.backgroundColor=UIColor(red:0.20, green:0.23, blue:0.35, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.25, green:0.32, blue:0.45, alpha:1.0)
         case 68:
-            self.backgroundColor=UIColor(red:0.19, green:0.22, blue:0.34, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.24, green:0.31, blue:0.44, alpha:1.0) // termina 637294-3C4F6F
         case 69:
-            self.backgroundColor=UIColor(red:0.19, green:0.21, blue:0.33, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.24, green:0.30, blue:0.43, alpha:1.0) // De 3C4F6F a 161A25
         case 70:
+            self.backgroundColor=UIColor(red:0.23, green:0.30, blue:0.42, alpha:1.0)
+        case 71:
+            self.backgroundColor=UIColor(red:0.23, green:0.29, blue:0.41, alpha:1.0)
+        case 72:
+            self.backgroundColor=UIColor(red:0.22, green:0.28, blue:0.40, alpha:1.0)
+        case 73:
+            self.backgroundColor=UIColor(red:0.22, green:0.27, blue:0.39, alpha:1.0)
+        case 74:
+            self.backgroundColor=UIColor(red:0.21, green:0.26, blue:0.38, alpha:1.0)
+        case 75:
+            self.backgroundColor=UIColor(red:0.21, green:0.25, blue:0.37, alpha:1.0)
+        case 76:
+            self.backgroundColor=UIColor(red:0.20, green:0.24, blue:0.36, alpha:1.0)
+        case 77:
+            self.backgroundColor=UIColor(red:0.20, green:0.23, blue:0.35, alpha:1.0)
+        case 78:
+            self.backgroundColor=UIColor(red:0.19, green:0.22, blue:0.34, alpha:1.0)
+        case 79:
+            self.backgroundColor=UIColor(red:0.19, green:0.21, blue:0.33, alpha:1.0)
+        case 80:
             self.backgroundColor=UIColor(red:0.18, green:0.20, blue:0.32, alpha:1.0)
             
             
-        case 71:
+        case 81:
             self.backgroundColor=UIColor(red:0.18, green:0.19, blue:0.31, alpha:1.0)
-        case 72:
+        case 82:
             self.backgroundColor=UIColor(red:0.17, green:0.18, blue:0.30, alpha:1.0)
-        case 73:
+        case 83:
             self.backgroundColor=UIColor(red:0.17, green:0.17, blue:0.29, alpha:1.0)
-        case 74:
+        case 84:
             self.backgroundColor=UIColor(red:0.16, green:0.16, blue:0.28, alpha:1.0)
-        case 75:
+        case 85:
             self.backgroundColor=UIColor(red:0.16, green:0.15, blue:0.27, alpha:1.0)
-        case 76:
+        case 86:
             self.backgroundColor=UIColor(red:0.15, green:0.14, blue:0.26, alpha:1.0)
-        case 77:
+        case 87:
             self.backgroundColor=UIColor(red:0.15, green:0.13, blue:0.25, alpha:1.0)
-        case 78:
+        case 88:
             self.backgroundColor=UIColor(red:0.14, green:0.12, blue:0.24, alpha:1.0)
-        case 79:
+        case 89:
             self.backgroundColor=UIColor(red:0.14, green:0.11, blue:0.25, alpha:1.0)
-        case 80:
+        case 90:
             self.backgroundColor=UIColor(red:0.13, green:0.10, blue:0.24, alpha:1.0)
             
-        case 81:
-            self.backgroundColor=UIColor(red:0.13, green:0.09, blue:0.23, alpha:1.0)
-        case 82:
-            self.backgroundColor=UIColor(red:0.12, green:0.08, blue:0.22, alpha:1.0)
-        case 83:
-            self.backgroundColor=UIColor(red:0.12, green:0.07, blue:0.21, alpha:1.0)
-        case 84:
-            self.backgroundColor=UIColor(red:0.11, green:0.06, blue:0.20, alpha:1.0)
-        case 85:
-            self.backgroundColor=UIColor(red:0.11, green:0.05, blue:0.19, alpha:1.0)
-        case 86:
-            self.backgroundColor=UIColor(red:0.10, green:0.04, blue:0.18, alpha:1.0)
-        case 87:
-            self.backgroundColor=UIColor(red:0.10, green:0.03, blue:0.17, alpha:1.0)
-        case 88:
-            self.backgroundColor=UIColor(red:0.09, green:0.02, blue:0.16, alpha:1.0)
-        case 89:
-            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
-        case 90:
-            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
-            
-        
         case 91:
-            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0) // Termina 3C4F6F-161A25
+            self.backgroundColor=UIColor(red:0.13, green:0.09, blue:0.23, alpha:1.0)
         case 92:
-            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0) // De 161A25 a 0B0C13
+            self.backgroundColor=UIColor(red:0.12, green:0.08, blue:0.22, alpha:1.0)
         case 93:
-            self.backgroundColor=UIColor(red:0.08, green:0.001, blue:0.14, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.12, green:0.07, blue:0.21, alpha:1.0)
         case 94:
-            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.11, green:0.06, blue:0.20, alpha:1.0)
         case 95:
-            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.11, green:0.05, blue:0.19, alpha:1.0)
         case 96:
-            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.10, green:0.04, blue:0.18, alpha:1.0)
         case 97:
+            self.backgroundColor=UIColor(red:0.10, green:0.03, blue:0.17, alpha:1.0)
+        case 98:
+            self.backgroundColor=UIColor(red:0.09, green:0.02, blue:0.16, alpha:1.0)
+        case 99:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 100:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+            
+        
+        case 101:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0) // Termina 3C4F6F-161A25
+        case 102:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0) // De 161A25 a 0B0C13
+        case 103:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 104:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 105:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 106:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 107:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 108:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 109:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0)
+        case 110:
+            self.backgroundColor=UIColor(red:0.09, green:0.01, blue:0.15, alpha:1.0) //0
+        case 111:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 112:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 113:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 114:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 115:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 116:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 117:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 118:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0)
+        case 119:
+            self.backgroundColor=UIColor(red:0.08, green:0.01, blue:0.14, alpha:1.0) //1
+        case 120:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 121:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 122:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 123:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 124:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 125:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 126:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 127:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0)
+        case 128:
+            self.backgroundColor=UIColor(red:0.08, green:0.02, blue:0.13, alpha:1.0) //2
+        case 129:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 130:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 131:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 132:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 133:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 134:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 135:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0)
+        case 136:
+            self.backgroundColor=UIColor(red:0.07, green:0.03, blue:0.12, alpha:1.0) //3
+        case 137:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 138:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 139:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 140:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 141:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 142:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 143:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 144:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)
+        case 145:
+            self.backgroundColor=UIColor(red:0.06, green:0.04, blue:0.11, alpha:1.0)//4
+        case 146:
             self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 147:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 148:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 149:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 150:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 151:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 152:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 153:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0)
+        case 154:
+            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.10, alpha:1.0) //5
+        
         
             
-        case 98:
-            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0) //
-        case 99:
+        case 155:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 156:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 157:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 158:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 159:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 160:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 161:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 162:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0)
+        case 163:
+            self.backgroundColor=UIColor(red:0.05, green:0.06, blue:0.09, alpha:1.0) //6
+        case 164:
             self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
-        
-        case 100:
+        case 165:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 166:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 167:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 168:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 169:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 170:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 171:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0)
+        case 172:
+            self.backgroundColor=UIColor(red:0.04, green:0.06, blue:0.08, alpha:1.0) //7
+    
+        case 173:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 174:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 175:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 176:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 177:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 178:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 179:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 180:
+            self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0)
+        case 181:
             self.backgroundColor=UIColor(red:0.04, green:0.05, blue:0.07, alpha:1.0) // Termina 161A25-0B0C13
-        case 101:
+            
+        case 182:
             self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.07, alpha:1.0) // De 0B0C13 a A33F35
-        case 102:
-            self.backgroundColor=UIColor(red:0.05, green:0.05, blue:0.07, alpha:1.0)
-        case 103:
-            self.backgroundColor=UIColor(red:0.06, green:0.05, blue:0.07, alpha:1.0)
-        case 104:
+        
+        case 183:
             self.backgroundColor=UIColor(red:0.07, green:0.05, blue:0.07, alpha:1.0)
-        case 105:
-            self.backgroundColor=UIColor(red:0.08, green:0.06, blue:0.07, alpha:1.0)
-        case 106:
+        
+        case 184:
             self.backgroundColor=UIColor(red:0.09, green:0.06, blue:0.08, alpha:1.0)
-        case 107:
-            self.backgroundColor=UIColor(red:0.10, green:0.06, blue:0.08, alpha:1.0)
-        case 108:
+       
+        case 185:
             self.backgroundColor=UIColor(red:0.11, green:0.07, blue:0.08, alpha:1.0)
             
-        case 109:
-            self.backgroundColor=UIColor(red:0.12, green:0.07, blue:0.08, alpha:1.0)
-        case 110:
+        
+        case 186:
             self.backgroundColor=UIColor(red:0.13, green:0.07, blue:0.09, alpha:1.0)
-        case 111:
-            self.backgroundColor=UIColor(red:0.14, green:0.08, blue:0.09, alpha:1.0)
-        case 112:
+        
+        case 187:
             self.backgroundColor=UIColor(red:0.15, green:0.08, blue:0.09, alpha:1.0)
-        case 113:
-            self.backgroundColor=UIColor(red:0.16, green:0.08, blue:0.09, alpha:1.0)
-        case 114:
+        
+        case 188:
             self.backgroundColor=UIColor(red:0.17, green:0.09, blue:0.09, alpha:1.0)
-        case 115:
-            self.backgroundColor=UIColor(red:0.18, green:0.09, blue:0.10, alpha:1.0)
-        case 116:
+        
+        case 189:
             self.backgroundColor=UIColor(red:0.19, green:0.09, blue:0.10, alpha:1.0)
-        case 117:
-            self.backgroundColor=UIColor(red:0.20, green:0.10, blue:0.10, alpha:1.0)
-        case 118:
+       
+        case 190:
             self.backgroundColor=UIColor(red:0.21, green:0.10, blue:0.10, alpha:1.0)
             
-        case 119:
-            self.backgroundColor=UIColor(red:0.22, green:0.10, blue:0.11, alpha:1.0)
-        case 120:
+        
+        case 191:
             self.backgroundColor=UIColor(red:0.23, green:0.11, blue:0.11, alpha:1.0)
-        case 121:
-            self.backgroundColor=UIColor(red:0.24, green:0.11, blue:0.11, alpha:1.0)
-        case 122:
+        case 192:
             self.backgroundColor=UIColor(red:0.25, green:0.11, blue:0.11, alpha:1.0)
-        case 123:
-            self.backgroundColor=UIColor(red:0.26, green:0.12, blue:0.12, alpha:1.0)
-        case 124:
+        
+        case 193:
             self.backgroundColor=UIColor(red:0.27, green:0.12, blue:0.12, alpha:1.0)
-        case 125:
-            self.backgroundColor=UIColor(red:0.28, green:0.12, blue:0.12, alpha:1.0)
-        case 126:
+        
+        case 194:
             self.backgroundColor=UIColor(red:0.29, green:0.13, blue:0.12, alpha:1.0)
-        case 127:
-            self.backgroundColor=UIColor(red:0.30, green:0.13, blue:0.12, alpha:1.0)
-        case 128:
+        
+        case 195:
             self.backgroundColor=UIColor(red:0.31, green:0.13, blue:0.13, alpha:1.0)
         
-        case 129:
-            self.backgroundColor=UIColor(red:0.32, green:0.14, blue:0.13, alpha:1.0)
-        case 130:
+        
+        case 196:
             self.backgroundColor=UIColor(red:0.33, green:0.14, blue:0.13, alpha:1.0)
-        case 131:
-            self.backgroundColor=UIColor(red:0.34, green:0.14, blue:0.13, alpha:1.0)
-        case 132:
+        case 197:
             self.backgroundColor=UIColor(red:0.35, green:0.15, blue:0.14, alpha:1.0)
-        case 133:
-            self.backgroundColor=UIColor(red:0.36, green:0.15, blue:0.14, alpha:1.0)
-        case 134:
+        case 198:
             self.backgroundColor=UIColor(red:0.37, green:0.15, blue:0.14, alpha:1.0)
-        case 135:
-            self.backgroundColor=UIColor(red:0.38, green:0.16, blue:0.14, alpha:1.0)
-        case 136:
+        case 199:
             self.backgroundColor=UIColor(red:0.39, green:0.16, blue:0.15, alpha:1.0)
-        case 137:
-            self.backgroundColor=UIColor(red:0.40, green:0.16, blue:0.15, alpha:1.0)
-        case 138:
+        
+        case 200:
             self.backgroundColor=UIColor(red:0.41, green:0.17, blue:0.15, alpha:1.0)
             
             
-        case 139:
-            self.backgroundColor=UIColor(red:0.42, green:0.17, blue:0.15, alpha:1.0)
-        case 140:
+        
+        case 201:
             self.backgroundColor=UIColor(red:0.43, green:0.17, blue:0.15, alpha:1.0)
-        case 141:
-            self.backgroundColor=UIColor(red:0.44, green:0.18, blue:0.16, alpha:1.0)
-        case 142:
+        
+        case 202:
             self.backgroundColor=UIColor(red:0.45, green:0.18, blue:0.16, alpha:1.0)
-        case 143:
-            self.backgroundColor=UIColor(red:0.46, green:0.18, blue:0.16, alpha:1.0)
-        case 144:
+        
+        case 203:
             self.backgroundColor=UIColor(red:0.47, green:0.19, blue:0.16, alpha:1.0)
-        case 145:
-            self.backgroundColor=UIColor(red:0.48, green:0.19, blue:0.17, alpha:1.0)
-        case 146:
+        
+        case 204:
             self.backgroundColor=UIColor(red:0.49, green:0.19, blue:0.17, alpha:1.0)
-        case 147:
-            self.backgroundColor=UIColor(red:0.50, green:0.20, blue:0.17, alpha:1.0)
-        case 148:
+        
+        case 205:
             self.backgroundColor=UIColor(red:0.51, green:0.20, blue:0.17, alpha:1.0)
         
-        case 149:
-            self.backgroundColor=UIColor(red:0.52, green:0.20, blue:0.18, alpha:1.0)
-        case 150:
+       
+        case 206:
             self.backgroundColor=UIColor(red:0.53, green:0.21, blue:0.18, alpha:1.0)
-        case 151:
-            self.backgroundColor=UIColor(red:0.54, green:0.21, blue:0.18, alpha:1.0)
-        case 152:
+        
+        case 207:
             self.backgroundColor=UIColor(red:0.55, green:0.21, blue:0.18, alpha:1.0)
-        case 153:
-            self.backgroundColor=UIColor(red:0.56, green:0.22, blue:0.18, alpha:1.0)
-        case 154:
+        
+        case 208:
             self.backgroundColor=UIColor(red:0.57, green:0.22, blue:0.19, alpha:1.0)
-        case 155:
-            self.backgroundColor=UIColor(red:0.58, green:0.22, blue:0.19, alpha:1.0)
-        case 156:
+        
+        case 209:
             self.backgroundColor=UIColor(red:0.59, green:0.23, blue:0.19, alpha:1.0)
-        case 157:
-            self.backgroundColor=UIColor(red:0.60, green:0.23, blue:0.19, alpha:1.0)
-        case 158:
+        
+        case 210:
             self.backgroundColor=UIColor(red:0.61, green:0.23, blue:0.20, alpha:1.0)
         
-        case 159:
-            self.backgroundColor=UIColor(red:0.62, green:0.24, blue:0.20, alpha:1.0)
-        case 160:
-            self.backgroundColor=UIColor(red:0.63, green:0.24, blue:0.20, alpha:1.0)
-        case 161:
-            self.backgroundColor=UIColor(red:0.64, green:0.25, blue:0.21, alpha:1.0) // Termina 0B0C13-A33F35
-        case 162:
+        
+        case 211:
+            self.backgroundColor=UIColor(red:0.63, green:0.24, blue:0.20, alpha:1.0)// Termina 0B0C13-A33F35
+        case 212:
             self.backgroundColor=UIColor(red:0.65, green:0.25, blue:0.21, alpha:1.0) // De A33F35 a E37042
-        case 163:
-            self.backgroundColor=UIColor(red:0.66, green:0.26, blue:0.21, alpha:1.0)
-        case 164:
+        
+        case 213:
             self.backgroundColor=UIColor(red:0.67, green:0.27, blue:0.21, alpha:1.0)
-        case 165:
-            self.backgroundColor=UIColor(red:0.68, green:0.28, blue:0.21, alpha:1.0)
-        case 166:
+       
+        case 214:
             self.backgroundColor=UIColor(red:0.69, green:0.29, blue:0.21, alpha:1.0)
-        case 167:
-            self.backgroundColor=UIColor(red:0.70, green:0.29, blue:0.22, alpha:1.0)
-        case 168:
+        
+        case 215:
             self.backgroundColor=UIColor(red:0.71, green:0.30, blue:0.22, alpha:1.0)
             
-        case 169:
-            self.backgroundColor=UIColor(red:0.72, green:0.31, blue:0.22, alpha:1.0)
-        case 170:
+        
+        case 216:
             self.backgroundColor=UIColor(red:0.73, green:0.32, blue:0.22, alpha:1.0)
-        case 171:
-            self.backgroundColor=UIColor(red:0.74, green:0.33, blue:0.22, alpha:1.0)
-        case 172:
+        
+        case 217:
             self.backgroundColor=UIColor(red:0.75, green:0.33, blue:0.23, alpha:1.0)
-        case 173:
-            self.backgroundColor=UIColor(red:0.76, green:0.34, blue:0.23, alpha:1.0)
-        case 174:
+        
+        case 218:
             self.backgroundColor=UIColor(red:0.77, green:0.35, blue:0.23, alpha:1.0)
-        case 175:
-            self.backgroundColor=UIColor(red:0.78, green:0.36, blue:0.23, alpha:1.0)
-        case 176:
+        
+        case 219:
             self.backgroundColor=UIColor(red:0.79, green:0.37, blue:0.23, alpha:1.0)
-        case 177:
-            self.backgroundColor=UIColor(red:0.80, green:0.37, blue:0.24, alpha:1.0)
-        case 178:
+        
+        case 220:
             self.backgroundColor=UIColor(red:0.81, green:0.38, blue:0.24, alpha:1.0)
             
             
-        case 179:
-            self.backgroundColor=UIColor(red:0.82, green:0.39, blue:0.24, alpha:1.0)
-        case 180:
-            self.backgroundColor=UIColor(red:0.83, green:0.40, blue:0.24, alpha:1.0)
-        case 181:
-            self.backgroundColor=UIColor(red:0.84, green:0.41, blue:0.24, alpha:1.0)
-        case 182:
-            self.backgroundColor=UIColor(red:0.85, green:0.41, blue:0.25, alpha:1.0)
-        case 183:
-            self.backgroundColor=UIColor(red:0.86, green:0.42, blue:0.25, alpha:1.0)
-        case 184:
-            self.backgroundColor=UIColor(red:0.87, green:0.43, blue:0.25, alpha:1.0)
-        case 185:
-            self.backgroundColor=UIColor(red:0.88, green:0.44, blue:0.25, alpha:1.0)
-        case 186:
-            self.backgroundColor=UIColor(red:0.89, green:0.44, blue:0.26, alpha:1.0) // Termina A33F35 - E37042
-        case 187:
-            self.backgroundColor=UIColor(red:0.87, green:0.45, blue:0.27, alpha:1.0) // De E37042 a C98659
-        case 188:
-            self.backgroundColor=UIColor(red:0.86, green:0.46, blue:0.28, alpha:1.0)
-           
-            
-        case 189:
-            self.backgroundColor=UIColor(red:0.85, green:0.47, blue:0.29, alpha:1.0)
-        case 190:
-            self.backgroundColor=UIColor(red:0.84, green:0.48, blue:0.30, alpha:1.0)
-        case 191:
-            self.backgroundColor=UIColor(red:0.83, green:0.49, blue:0.31, alpha:1.0)
-        case 192:
-            self.backgroundColor=UIColor(red:0.82, green:0.50, blue:0.32, alpha:1.0)
-        case 193:
-            self.backgroundColor=UIColor(red:0.81, green:0.51, blue:0.33, alpha:1.0)
-        case 194:
-            self.backgroundColor=UIColor(red:0.81, green:0.52, blue:0.34, alpha:1.0)
-        case 195:
-            self.backgroundColor=UIColor(red:0.79, green:0.53, blue:0.35, alpha:1.0)
-        case 196:
-            self.backgroundColor=UIColor(red:0.79, green:0.53, blue:0.36, alpha:1.0) // De C98659-C4B6AA
-        case 197:
-            self.backgroundColor=UIColor(red:0.78, green:0.54, blue:0.37, alpha:1.0)
-        case 198:
-            self.backgroundColor=UIColor(red:0.78, green:0.54, blue:0.38, alpha:1.0)
-            
-        case 199:
-            self.backgroundColor=UIColor(red:0.78, green:0.55, blue:0.39, alpha:1.0)
-        case 200:
-            self.backgroundColor=UIColor(red:0.78, green:0.55, blue:0.40, alpha:1.0)
-        case 201:
-            self.backgroundColor=UIColor(red:0.78, green:0.56, blue:0.41, alpha:1.0)
-        case 202:
-            self.backgroundColor=UIColor(red:0.78, green:0.56, blue:0.42, alpha:1.0)
-        case 203:
-            self.backgroundColor=UIColor(red:0.78, green:0.57, blue:0.43, alpha:1.0)
-        case 204:
-            self.backgroundColor=UIColor(red:0.78, green:0.58, blue:0.44, alpha:1.0)
-        case 205:
-            self.backgroundColor=UIColor(red:0.78, green:0.58, blue:0.45, alpha:1.0)
-        case 206:
-            self.backgroundColor=UIColor(red:0.78, green:0.59, blue:0.46, alpha:1.0)
-        case 207:
-            self.backgroundColor=UIColor(red:0.78, green:0.59, blue:0.47, alpha:1.0)
-        case 208:
-            self.backgroundColor=UIColor(red:0.78, green:0.60, blue:0.48, alpha:1.0)
-            
-        case 209:
-            self.backgroundColor=UIColor(red:0.78, green:0.60, blue:0.49, alpha:1.0)
-        case 210:
-            self.backgroundColor=UIColor(red:0.78, green:0.61, blue:0.50, alpha:1.0)
-        case 211:
-            self.backgroundColor=UIColor(red:0.78, green:0.62, blue:0.51, alpha:1.0)
-        case 212:
-            self.backgroundColor=UIColor(red:0.77, green:0.62, blue:0.52, alpha:1.0)
-        case 213:
-            self.backgroundColor=UIColor(red:0.77, green:0.63, blue:0.53, alpha:1.0)
-        case 214:
-            self.backgroundColor=UIColor(red:0.77, green:0.63, blue:0.54, alpha:1.0)
-        case 215:
-            self.backgroundColor=UIColor(red:0.77, green:0.64, blue:0.55, alpha:1.0)
-        case 216:
-            self.backgroundColor=UIColor(red:0.77, green:0.64, blue:0.56, alpha:1.0)
-        case 217:
-            self.backgroundColor=UIColor(red:0.77, green:0.65, blue:0.57, alpha:1.0)
-        case 218:
-            self.backgroundColor=UIColor(red:0.77, green:0.65, blue:0.58, alpha:1.0)
         
-        case 219:
-            self.backgroundColor=UIColor(red:0.77, green:0.66, blue:0.59, alpha:1.0)
-        case 220:
-            self.backgroundColor=UIColor(red:0.77, green:0.67, blue:0.60, alpha:1.0)
         case 221:
-            self.backgroundColor=UIColor(red:0.77, green:0.67, blue:0.61, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.83, green:0.40, blue:0.24, alpha:1.0)
+        
         case 222:
-            self.backgroundColor=UIColor(red:0.77, green:0.68, blue:0.62, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.85, green:0.41, blue:0.25, alpha:1.0)
+        
         case 223:
-            self.backgroundColor=UIColor(red:0.77, green:0.68, blue:0.63, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.87, green:0.43, blue:0.25, alpha:1.0)
+        
         case 224:
-            self.backgroundColor=UIColor(red:0.77, green:0.69, blue:0.64, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.89, green:0.44, blue:0.26, alpha:1.0) // Termina A33F35 - E37042
         case 225:
-            self.backgroundColor=UIColor(red:0.77, green:0.69, blue:0.65, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.87, green:0.45, blue:0.27, alpha:1.0) // De E37042 a C98659
+        
+        
+            
         case 226:
-            self.backgroundColor=UIColor(red:0.77, green:0.70, blue:0.66, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.85, green:0.47, blue:0.29, alpha:1.0)
+        
         case 227:
-            self.backgroundColor=UIColor(red:0.77, green:0.71, blue:0.67, alpha:1.0) //Termina C98659-C4B6AA
+            self.backgroundColor=UIColor(red:0.83, green:0.49, blue:0.31, alpha:1.0)
+        
         case 228:
-            self.backgroundColor=UIColor(red:0.76, green:0.71, blue:0.68, alpha:1.0) // De C4B6AA a BBC2CE
+            self.backgroundColor=UIColor(red:0.81, green:0.51, blue:0.33, alpha:1.0)
         
         case 229:
-            self.backgroundColor=UIColor(red:0.76, green:0.71, blue:0.69, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.79, green:0.53, blue:0.35, alpha:1.0)// De C98659-C4B6AA
         case 230:
-            self.backgroundColor=UIColor(red:0.76, green:0.72, blue:0.70, alpha:1.0)
-       case 231:
-            self.backgroundColor=UIColor(red:0.75, green:0.72, blue:0.71, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.78, green:0.54, blue:0.37, alpha:1.0)
+        
+            
+        case 231:
+            self.backgroundColor=UIColor(red:0.78, green:0.55, blue:0.39, alpha:1.0)
+        
         case 232:
-            self.backgroundColor=UIColor(red:0.75, green:0.72, blue:0.72, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.78, green:0.56, blue:0.41, alpha:1.0)
+        
         case 233:
-            self.backgroundColor=UIColor(red:0.75, green:0.73, blue:0.73, alpha:1.0)
-        case 234:
-            self.backgroundColor=UIColor(red:0.75, green:0.73, blue:0.74, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.78, green:0.57, blue:0.43, alpha:1.0)
+        
+        case 334:
+            self.backgroundColor=UIColor(red:0.78, green:0.58, blue:0.45, alpha:1.0)
+        
         case 235:
-            self.backgroundColor=UIColor(red:0.74, green:0.73, blue:0.75, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.78, green:0.59, blue:0.47, alpha:1.0)
+        
+            
         case 236:
-            self.backgroundColor=UIColor(red:0.74, green:0.74, blue:0.76, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.78, green:0.60, blue:0.49, alpha:1.0)
+        
         case 237:
-            self.backgroundColor=UIColor(red:0.74, green:0.74, blue:0.77, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.78, green:0.62, blue:0.51, alpha:1.0)
+        
         case 238:
-            self.backgroundColor=UIColor(red:0.73, green:0.74, blue:0.78, alpha:1.0)
-            
-            
+            self.backgroundColor=UIColor(red:0.77, green:0.63, blue:0.53, alpha:1.0)
+        
         case 239:
-            self.backgroundColor=UIColor(red:0.73, green:0.75, blue:0.79, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.77, green:0.64, blue:0.55, alpha:1.0)
+        
         case 240:
-            self.backgroundColor=UIColor(red:0.73, green:0.75, blue:0.80, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.77, green:0.65, blue:0.57, alpha:1.0)
+        
+    
         case 241:
-            self.backgroundColor=UIColor(red:0.73, green:0.76, blue:0.81, alpha:1.0) // Termina C4B6AA-BBC2CE
+            self.backgroundColor=UIColor(red:0.77, green:0.66, blue:0.59, alpha:1.0)
+        
         case 242:
-            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.82, alpha:1.0)// De BBC2CE a B5C6E8
+            self.backgroundColor=UIColor(red:0.77, green:0.67, blue:0.61, alpha:1.0)
+        
         case 243:
-            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.83, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.77, green:0.68, blue:0.63, alpha:1.0)
+        
         case 244:
-            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.84, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.77, green:0.69, blue:0.65, alpha:1.0)
+       
         case 245:
-            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.85, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.77, green:0.71, blue:0.67, alpha:1.0) //Termina C98659-C4B6AA
         case 246:
-            self.backgroundColor=UIColor(red:0.71, green:0.76, blue:0.86, alpha:1.0)
+            self.backgroundColor=UIColor(red:0.76, green:0.71, blue:0.68, alpha:1.0) // De C4B6AA a BBC2CE
+        
         case 247:
+            self.backgroundColor=UIColor(red:0.76, green:0.71, blue:0.69, alpha:1.0)
+        
+       case 248:
+            self.backgroundColor=UIColor(red:0.75, green:0.72, blue:0.71, alpha:1.0)
+        
+        case 249:
+            self.backgroundColor=UIColor(red:0.75, green:0.73, blue:0.73, alpha:1.0)
+        
+        case 250:
+            self.backgroundColor=UIColor(red:0.74, green:0.73, blue:0.75, alpha:1.0)
+        
+        case 251:
+            self.backgroundColor=UIColor(red:0.74, green:0.74, blue:0.77, alpha:1.0)
+        
+            
+            
+        case 252:
+            self.backgroundColor=UIColor(red:0.73, green:0.75, blue:0.79, alpha:1.0)
+        
+        case 253:
+            self.backgroundColor=UIColor(red:0.73, green:0.76, blue:0.81, alpha:1.0) // Termina C4B6AA-BBC2CE
+        case 254:
+            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.82, alpha:1.0)// De BBC2CE a B5C6E8
+        case 255:
+            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.83, alpha:1.0)
+        case 256:
+            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.84, alpha:1.0)
+        case 257:
+            self.backgroundColor=UIColor(red:0.72, green:0.76, blue:0.85, alpha:1.0)
+        case 258:
+            self.backgroundColor=UIColor(red:0.71, green:0.76, blue:0.86, alpha:1.0)
+        case 259:
             self.backgroundColor=UIColor(red:0.71, green:0.77, blue:0.87, alpha:1.0)
-        case 248:
+        case 260:
             self.backgroundColor=UIColor(red:0.71, green:0.77, blue:0.88, alpha:1.0)
             
-        case 249:
+        case 261:
             self.backgroundColor=UIColor(red:0.71, green:0.77, blue:0.89, alpha:1.0)
-        case 250:
+        case 262:
             self.backgroundColor=UIColor(red:0.71, green:0.77, blue:0.90, alpha:1.0)
-        case 251:
+        case 263:
             self.backgroundColor=UIColor(red:0.71, green:0.78, blue:0.91, alpha:1.0) // Termina BBC2CE-B5C6E8
-        case 252:
+        case 264:
             self.backgroundColor=UIColor(red:0.70, green:0.77, blue:0.91, alpha:1.0)// De B5C6E8 a 8EB1FE
-        case 253:
+        case 265:
             self.backgroundColor=UIColor(red:0.69, green:0.76, blue:0.92, alpha:1.0)
-        case 254:
+        case 266:
             self.backgroundColor=UIColor(red:0.68, green:0.76, blue:0.92, alpha:1.0)
-        case 255:
+        case 267:
             self.backgroundColor=UIColor(red:0.67, green:0.75, blue:0.93, alpha:1.0)
-        case 256:
+        case 268:
             self.backgroundColor=UIColor(red:0.66, green:0.75, blue:0.94, alpha:1.0)
-        case 257:
+        case 269:
             self.backgroundColor=UIColor(red:0.65, green:0.74, blue:0.94, alpha:1.0)
-        case 258:
+        case 270:
             self.backgroundColor=UIColor(red:0.64, green:0.73, blue:0.95, alpha:1.0)
             
-        case 259:
+        case 271:
             self.backgroundColor=UIColor(red:0.63, green:0.73, blue:0.95, alpha:1.0)
-        case 260:
+        case 272:
             self.backgroundColor=UIColor(red:0.62, green:0.72, blue:0.96, alpha:1.0)
-        case 261:
+        case 273:
             self.backgroundColor=UIColor(red:0.61, green:0.72, blue:0.97, alpha:1.0)
-        case 262:
+        case 274:
             self.backgroundColor=UIColor(red:0.60, green:0.71, blue:0.97, alpha:1.0)
-        case 263:
+        case 275:
             self.backgroundColor=UIColor(red:0.59, green:0.70, blue:0.98, alpha:1.0)
-        case 264:
+        case 276:
             self.backgroundColor=UIColor(red:0.58, green:0.70, blue:0.98, alpha:1.0)
-        case 265:
+        case 277:
             self.backgroundColor=UIColor(red:0.57, green:0.69, blue:0.99, alpha:1.0)
-        case 266:
+        case 278:
             self.backgroundColor=UIColor(red:0.56, green:0.69, blue:1.00, alpha:1.0) //Termina B5C6E8-8EB1FE
         
         default:
