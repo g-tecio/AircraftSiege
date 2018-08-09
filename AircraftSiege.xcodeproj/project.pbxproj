@@ -401,13 +401,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGJ38X9R26;
+				DEVELOPMENT_TEAM = GRN98QF5DC;
 				INFOPLIST_FILE = AircraftSiege/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.AircraftSiege;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.otro.AircraftSiege;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,13 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TGJ38X9R26;
+				DEVELOPMENT_TEAM = GRN98QF5DC;
 				INFOPLIST_FILE = AircraftSiege/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.AircraftSiege;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cartwheelgalaxy.games.otro.AircraftSiege;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
