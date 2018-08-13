@@ -11,7 +11,6 @@ import SpriteKit
 class GameOverScene: SKScene {
     
     var score:Int = 0
-    
     var scoreLabel:SKLabelNode!
     var newGameButtonNode:SKSpriteNode!
     var mainMenu:SKSpriteNode!
