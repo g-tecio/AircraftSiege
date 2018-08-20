@@ -11,7 +11,6 @@ import SpriteKit
 class MenuScene: SKScene {
     
     var newGameButtonNode = SKSpriteNode()
-    var menuScreenNode:SKSpriteNode!
     var kmScore:SKSpriteNode!
     var lifeBar:SKSpriteNode!
     var gasIcon:SKSpriteNode!
@@ -53,7 +52,7 @@ class MenuScene: SKScene {
         newGameButtonNode.name = "newGameButton"
         newGameButtonNode.position = CGPoint(x: self.frame.size.width*5/10, y: self.size.height*1/10)
         //newGameButtonNode.position = CGPoint(x: frame.size.width / 2, y: frame.size.height * 0.10)
-        newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.2),  height: frame.size.height * 0.12)
+        newGameButtonNode.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.21),  height: frame.size.height * 0.12)
         self.addChild(newGameButtonNode)
    
         
@@ -61,7 +60,7 @@ class MenuScene: SKScene {
         kmScore.zPosition = 4
         kmScore.size = CGSize(width: 152, height: 40)
         kmScore.position = CGPoint(x: self.frame.size.width / 4.5, y: kmScore.size.height / 2)
-        kmScore.size = CGSize(width:(kmScore.size.width)*(frame.size.width/kmScore.size.width * 0.375),  height: frame.size.height * 0.050)
+        //kmScore.size = CGSize(width:(kmScore.size.width)*(frame.size.width/kmScore.size.width * 0.375),  height: frame.size.height * 0.050)
         self.addChild(kmScore)
         
         lifeBar = SKSpriteNode(imageNamed: "life3")
@@ -75,7 +74,7 @@ class MenuScene: SKScene {
         gasIcon.zPosition = 4
         //gasIcon.size = CGSize(width: 20, height: 20)
         gasIcon.position = CGPoint(x: self.frame.size.width / 1.045, y: gasIcon.size.height / 2)
-         gasIcon.size = CGSize(width:(newGameButtonNode.size.width)*(frame.size.width/newGameButtonNode.size.width * 0.050),  height: frame.size.height * 0.030)
+         gasIcon.size = CGSize(width:(gasIcon.size.width)*(frame.size.width/gasIcon.size.width * 0.050),  height: frame.size.height * 0.030)
         self.addChild(gasIcon)
         
     }
