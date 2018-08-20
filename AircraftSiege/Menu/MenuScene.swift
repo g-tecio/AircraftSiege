@@ -21,11 +21,21 @@ class MenuScene: SKScene {
     
     override func didMove(to view: SKView) {
 
+         self.scaleMode = SKSceneScaleMode.fill
+        
+        gasIcon = SKSpriteNode(imageNamed: "lifeGauge")
+        gasIcon.zPosition = 4
+        //gasIcon.size = CGSize(width: 20, height: 20)
+        gasIcon.position = CGPoint(x: self.frame.size.width / 1.045, y: gasIcon.size.height*5/10)
+        gasIcon.size = CGSize(width:(gasIcon.size.width)*(frame.size.width/gasIcon.size.width * 0.050),  height: frame.size.height * 0.030)
+        self.addChild(gasIcon)
+        
         scoreLabel = SKLabelNode(text: "0 0 0 0 0 0")
         scoreLabel = SKLabelNode(fontNamed: "November")
         scoreLabel.zPosition = 5
         scoreLabel.position = CGPoint(x: self.frame.size.width*2.2/10, y: self.size.height*0.08/10)
         scoreLabel.fontSize = 12.5
+        
         scoreLabel.fontColor = UIColor.black
         
         var secondsText = String(format:"%06d", seconds)
@@ -58,9 +68,9 @@ class MenuScene: SKScene {
         
         kmScore = SKSpriteNode(imageNamed: "kmScore")
         kmScore.zPosition = 4
-        kmScore.size = CGSize(width: 152, height: 40)
-        kmScore.position = CGPoint(x: self.frame.size.width / 4.5, y: kmScore.size.height / 2)
-        //kmScore.size = CGSize(width:(kmScore.size.width)*(frame.size.width/kmScore.size.width * 0.375),  height: frame.size.height * 0.050)
+        //kmScore.size = CGSize(width: 152, height: 40)
+        kmScore.position = CGPoint(x: self.frame.size.width / 4.5, y: kmScore.size.height*1.5/10)
+        kmScore.size = CGSize(width:(kmScore.size.width)*(frame.size.width/kmScore.size.width * 0.375),  height: frame.size.height * 0.050)
         self.addChild(kmScore)
         
         lifeBar = SKSpriteNode(imageNamed: "life3")
@@ -70,12 +80,7 @@ class MenuScene: SKScene {
         lifeBar.position = CGPoint(x: self.frame.size.width / 1.10, y: lifeBar.size.height / 1.70)
         self.addChild(lifeBar)
         
-        gasIcon = SKSpriteNode(imageNamed: "lifeGauge")
-        gasIcon.zPosition = 4
-        //gasIcon.size = CGSize(width: 20, height: 20)
-        gasIcon.position = CGPoint(x: self.frame.size.width / 1.045, y: gasIcon.size.height / 2)
-         gasIcon.size = CGSize(width:(gasIcon.size.width)*(frame.size.width/gasIcon.size.width * 0.050),  height: frame.size.height * 0.030)
-        self.addChild(gasIcon)
+
         
     }
     

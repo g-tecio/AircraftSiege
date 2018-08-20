@@ -110,12 +110,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func didMove(to view: SKView) {
-
+        self.scaleMode = SKSceneScaleMode.fill
+        
         kmScore = SKSpriteNode(imageNamed: "kmScore")
         kmScore.zPosition = 4
-        kmScore.size = CGSize(width: 152, height: 40)
-        kmScore.position = CGPoint(x: self.frame.size.width / 4.5, y: kmScore.size.height / 2)
-        //kmScore.size = CGSize(width:(kmScore.size.width)*(frame.size.width/kmScore.size.width * 0.375),  height: frame.size.height * 0.050)
+       // kmScore.size = CGSize(width: 152, height: 40)
+         kmScore.position = CGPoint(x: self.frame.size.width / 4.5, y: kmScore.size.height*1.5/10)
+        kmScore.size = CGSize(width:(kmScore.size.width)*(frame.size.width/kmScore.size.width * 0.375),  height: frame.size.height * 0.050)
         self.addChild(kmScore)
         
         
@@ -136,7 +137,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         gasIcon = SKSpriteNode(imageNamed: "lifeGauge")
         gasIcon.zPosition = 4
         //gasIcon.size = CGSize(width: 20, height: 20)
-        gasIcon.position = CGPoint(x: self.frame.size.width / 1.045, y: gasIcon.size.height / 2)
+        gasIcon.position = CGPoint(x: self.frame.size.width / 1.045, y: gasIcon.size.height*5/10)
         gasIcon.size = CGSize(width:(gasIcon.size.width)*(frame.size.width/gasIcon.size.width * 0.050),  height: frame.size.height * 0.030)
         self.addChild(gasIcon)
         
@@ -166,7 +167,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player = SKSpriteNode(imageNamed: "Airplane")
         player.zPosition = 1
         player.position = CGPoint(x: self.frame.size.width / 2, y: self.size.height / 7.5)
-        player.size = CGSize(width:(player.size.width)*(frame.size.width/player.size.width * 0.13),  height: frame.size.height * 0.08)
+        player.size = CGSize(width:(player.size.width)*(frame.size.width/player.size.width * 0.14),  height: frame.size.height * 0.08)
         //player.size = CGSize(width: 88, height: 48)
         self.addChild(player)
         
@@ -1395,6 +1396,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 4.5)
                         self.run(SKAction.playSoundFileNamed("sfxLose.wav", waitForCompletion: false))
                         let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
+                        menuScene.scaleMode = SKSceneScaleMode.fill
                         menuScene.seconds = self.seconds
                         self.timer.invalidate()
                         self.view?.presentScene(menuScene, transition: transition)
@@ -1406,11 +1408,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                             let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 4.5)
                             let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
                             menuScene.seconds = self.seconds
+                            menuScene.scaleMode = SKSceneScaleMode.fill
                             self.timer.invalidate()
                             self.view?.presentScene(menuScene, transition: transition)
                             
                         }
                     })
+                    
+                    
+                    
                 }
             }
             
